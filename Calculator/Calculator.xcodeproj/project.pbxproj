@@ -14,6 +14,7 @@
 		EF87B91C283F664400B8F48B /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B91B283F664400B8F48B /* CalculatorTests.swift */; };
 		EF87B926283F664400B8F48B /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B925283F664400B8F48B /* CalculatorUITests.swift */; };
 		EF87B928283F664400B8F48B /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B927283F664400B8F48B /* CalculatorUITestsLaunchTests.swift */; };
+		EF87B936283F669400B8F48B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF87B935283F669400B8F48B /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EF87B921283F664400B8F48B /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF87B925283F664400B8F48B /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		EF87B927283F664400B8F48B /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF87B935283F669400B8F48B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		EF87B8FE283F664400B8F48B = {
 			isa = PBXGroup;
 			children = (
+				EF87B935283F669400B8F48B /* .swiftlint.yml */,
 				EF87B909283F664400B8F48B /* Calculator */,
 				EF87B91A283F664400B8F48B /* CalculatorTests */,
 				EF87B924283F664400B8F48B /* CalculatorUITests */,
@@ -134,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF87B92B283F664400B8F48B /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
+				EF87B934283F667400B8F48B /* SwiftLint Script */,
 				EF87B903283F664400B8F48B /* Sources */,
 				EF87B904283F664400B8F48B /* Frameworks */,
 				EF87B905283F664400B8F48B /* Resources */,
@@ -231,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF87B936283F669400B8F48B /* .swiftlint.yml in Resources */,
 				EF87B912283F664400B8F48B /* Preview Assets.xcassets in Resources */,
 				EF87B90F283F664400B8F48B /* Assets.xcassets in Resources */,
 			);
@@ -251,6 +256,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF87B934283F667400B8F48B /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 설정하기 https://github.com/realm/SwiftLint\n# ⚠️ M1 과 Intel 에서 SwiftLint 파일 경로가 다르기 때문에 주의\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF87B903283F664400B8F48B /* Sources */ = {
