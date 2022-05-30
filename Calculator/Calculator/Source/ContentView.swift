@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var buttons: [[CalculationButton]] = [
-        [.reset, .sign, .remain, .divide],
+        [.reset, .sign, .percent, .divide],
         [.seven, .eight, .nine, .multi],
         [.four, .five, .six, .minus],
         [.one, .two, .three, .plus],
@@ -49,8 +49,25 @@ struct CalculationButtonView: View {
         Button {
             // TODO: 버튼 클릭
         } label: {
-            Text(item.rawValue)
-                .font(.system(size: 38))
+            switch item {
+            case .equal, .minus, .plus, .divide, .percent, .multi, .sign:
+                item.image
+                    .font(.system(size: 32))
+                    .frame(
+                        width: self.buttonSize(item: item).width,
+                        height: self.buttonSize(item: item).height,
+                        alignment: .center
+                    )
+                    .background(item.backgroundColor)
+                    .foregroundColor(item.textColor)
+                    .cornerRadius(self.buttonSize(item: item).width / 2)
+            case .zero:
+                HStack {
+                    Text(item.rawValue)
+                        .font(.system(size: 35))
+                        .padding(.leading, 30)
+                    Spacer()
+                }
                 .frame(
                     width: self.buttonSize(item: item).width,
                     height: self.buttonSize(item: item).height,
@@ -59,9 +76,20 @@ struct CalculationButtonView: View {
                 .background(item.backgroundColor)
                 .foregroundColor(item.textColor)
                 .cornerRadius(self.buttonSize(item: item).width / 2)
+            default:
+                Text(item.rawValue)
+                    .font(.system(size: 35))
+                    .frame(
+                        width: self.buttonSize(item: item).width,
+                        height: self.buttonSize(item: item).height,
+                        alignment: .center
+                    )
+                    .background(item.backgroundColor)
+                    .foregroundColor(item.textColor)
+                    .cornerRadius(self.buttonSize(item: item).width / 2)
+            }
         }
     }
-    
     private func buttonSize(item: CalculationButton) -> CGSize {
         var width: CGFloat = (UIScreen.screenWidth - CalculationButtonView.buttonGap * 5) / 4
         let height: CGFloat = width

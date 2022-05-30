@@ -20,17 +20,38 @@ enum CalculationButton: String {
     case eight  = "8"
     case nine   = "9"
     case reset  = "AC"
-    case sign   = "+/-"
-    case divide = "/"
-    case remain = "%"
-    case multi  = "X"
-    case minus  = "-"
-    case plus   = "+"
-    case equal  = "="
+    case sign   = "􀅺"
+    case divide = "􀅿"
+    case percent = "􀘾"
+    case multi  = "􀅾"
+    case minus  = "􀅽"
+    case plus   = "􀅼"
+    case equal  = "􀆀"
+    
+    var image: Image {
+        switch self {
+        case .sign:
+            return .init(systemName: "plus.forwardslash.minus")
+        case .divide:
+            return .init(systemName: "divide")
+        case .percent:
+            return .init(systemName: "percent")
+        case .multi:
+            return .init(systemName: "multiply")
+        case .minus:
+            return .init(systemName: "minus")
+        case .plus:
+            return .init(systemName: "plus")
+        case .equal:
+            return .init(systemName: "equal")
+        default:
+            return .init(systemName: "")
+        }
+    }
     
     var backgroundColor: Color {
         switch self {
-        case .reset, .sign, .remain:
+        case .reset, .sign, .percent:
             return Palette.lightGray
         case .equal, .plus, .minus, .multi, .divide:
             return Palette.orange
@@ -41,7 +62,7 @@ enum CalculationButton: String {
     
     var textColor: Color {
         switch self {
-        case .reset, .sign, .remain:
+        case .reset, .sign, .percent:
             return .black
         default:
             return .white
