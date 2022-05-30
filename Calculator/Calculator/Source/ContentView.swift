@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let buttonGap: CGFloat = 12
     private let buttons: [[CalculationButton]] = [
         [.reset, .sign, .remain, .divide],
         [.seven, .eight, .nine, .multi],
@@ -15,8 +16,6 @@ struct ContentView: View {
         [.one, .two, .three, .plus],
         [.zero, .dot, .equal]
     ]
-    private let buttonGap: CGFloat = 12
-    
     @State private var showingNumber: String = "0"
     @State private var operand1: Double? = .none
     @State private var operand2: Double? = .none
@@ -62,7 +61,20 @@ struct ContentView: View {
                 .cornerRadius(self.buttonSize(item: item).width / 2)
         }
     }
-    
+}
+
+// MARK: UI
+extension ContentView {
+    private func buttonSize(item: CalculationButton) -> CGSize {
+        var width: CGFloat = (UIScreen.screenWidth - buttonGap * 5) / 4
+        let height: CGFloat = width
+        if item == .zero { width = width * 2 + buttonGap }
+        return CGSize(width: width, height: height)
+    }
+}
+
+// MARK: Logic
+extension ContentView {
     private func pressButton(item: CalculationButton) {
         judgeNumberPressed(item: item)
         judgeACPressed(item: item)
@@ -129,17 +141,6 @@ struct ContentView: View {
             self.operand2 = .none
             selectedOperation = .none
         }
-    }
-    
-}
-
-extension ContentView {
-    
-    private func buttonSize(item: CalculationButton) -> CGSize {
-        var width: CGFloat = (UIScreen.screenWidth - buttonGap * 5) / 4
-        let height: CGFloat = width
-        if item == .zero { width = width * 2 + buttonGap }
-        return CGSize(width: width, height: height)
     }
 }
 
