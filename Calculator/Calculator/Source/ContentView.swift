@@ -20,18 +20,7 @@ struct ContentView: View {
     @State private var operand1: Double? = .none
     @State private var operand2: Double? = .none
     @State private var selectedOperation: Operation = .none
-    private var dragGesture: some Gesture {
-      DragGesture()
-        .onChanged { _ in
-          // 드래그 상태가 변경될 때마다 애니메이션과 함께 포지션을 변경시킨다.
-          withAnimation(.interactiveSpring()) {
-              print("HELLO")
-//            positionX = action.location.x
-//            positionY = max(action.location.y, 0)
-          }
-        }
-    }
-
+    
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -39,13 +28,13 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("\(showingNumber.createRestIfNeeded())")
+                    Text("\(showingNumber)")
                         .font(.system(size: 90))
                         .fontWeight(.light)
                         .foregroundColor(.white)
-                        .padding(.trailing, 30)
+                        .padding([.leading, .trailing], 30)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                        .minimumScaleFactor(0.6)
                 }
                 ForEach(buttons, id: \.self) { row in
                     HStack(spacing: 8) {
@@ -78,7 +67,7 @@ struct ContentView: View {
                 HStack {
                     Text(item.rawValue)
                         .font(.system(size: 35))
-                        .padding(.leading, 30)
+                        .padding(.leading, 30) // TODO: 30 계산 무지성으로 넣었다............ 고쳐야합니다.
                     Spacer()
                 }
                 .frame(
@@ -120,19 +109,21 @@ extension ContentView {
     private func pressButton(item: CalculationButton) {
         judgeDotPressed(item: item)
         judgeNumberPressed(item: item)
+        judgeSignPressed(item: item)
+        judgePercentPressed(item: item)
         judgeACPressed(item: item)
         judgeOperationPressed(item: item)
         judgeEqualPressed(item: item)
     }
     
     private func judgeDotPressed(item: CalculationButton) {
-        if item == .dot {
-            let item = item.rawValue
-            if selectedOperation == .none {
-                writeDotCalculation(with: item, to: &operand1)
-            } else {
-                writeDotCalculation(with: item, to: &operand2)
-            }
+        guard item == .dot else { return }
+        
+        let item = item.rawValue
+        if selectedOperation == .none {
+            writeDotCalculation(with: item, to: &operand1)
+        } else {
+            writeDotCalculation(with: item, to: &operand2)
         }
     }
     
@@ -140,11 +131,12 @@ extension ContentView {
                                      to operand: inout Double?) {
         let newShowingNumber = operand == .none ?  "0\(item)" : "\(showingNumber)\(item)"
         showingNumber = newShowingNumber
-        operand = Double(showingNumber)
+        operand = Double(showingNumber.stringToNumber())
     }
     
     private func judgeNumberPressed(item: CalculationButton) {
         guard let item = Int(item.rawValue) else { return }
+        
         if selectedOperation == .none {
             writeNumberCalculation(with: item, to: &operand1)
         } else {
@@ -154,54 +146,82 @@ extension ContentView {
     
     private func writeNumberCalculation(with item: Int,
                                         to operand: inout Double?) {
-        let newOperand1ShowingNumber: String = (operand == .none) ? "\(item)" : "\(showingNumber)\(item)"
-        let newOperand2ShowingNumber: String = (operand != .none) ? "\(showingNumber)\(item)" : "\(item)"
+        var newOperand1ShowingNumber: String = (operand == .none) || showingNumber == "0" ? "\(item)" : "\(showingNumber)\(item)"
+        var newOperand2ShowingNumber: String = (operand == .none) ? "\(item)" : "\(showingNumber)\(item)"
+        if showingNumber == "-0" {
+            newOperand2ShowingNumber = "-\(item)"
+            newOperand1ShowingNumber = "-\(item)"
+        }
+        showingNumber = (operand == operand1) ? newOperand1ShowingNumber.createRestIfNeeded(newOperand1ShowingNumber) : newOperand2ShowingNumber
+        operand = Double(showingNumber.stringToNumber())
+    }
+    
+    private func judgeSignPressed(item: CalculationButton) {
+        guard item == .sign else { return }
+   
+        if selectedOperation == .none {
+            operand1 = (0 - (operand1 ?? 0))
+        } else {
+            operand2 = (0 - (operand2 ?? 0))
+        }
         
-        showingNumber = operand == operand1 ? newOperand1ShowingNumber : newOperand2ShowingNumber
-        operand = Double(showingNumber)
+        if let firstLetter = showingNumber.first, firstLetter == "-" {
+            showingNumber = String(showingNumber.dropFirst())
+        } else {
+            showingNumber = "-" + showingNumber
+        }
+        
+    }
+    
+    private func judgePercentPressed(item: CalculationButton) {
+        guard item == .percent else { return }
+        if let number = Double(showingNumber) {
+            showingNumber = String(number / 100)
+        }
     }
     
     private func judgeACPressed(item: CalculationButton) {
-        if item == .reset {
-            showingNumber = "0"
-            operand1 = .none
-            operand2 = .none
-            selectedOperation = .none
-        }
+        guard item == .reset else { return }
+        showingNumber = "0"
+        operand1 = .none
+        operand2 = .none
+        selectedOperation = .none
     }
     
     private func judgeOperationPressed(item: CalculationButton) {
-        if item.operation != .none {
-            operand1 = Double(showingNumber)
-            operand2 = .none
-        }
         let newOperation = item.operation
         selectedOperation = newOperation == .none ? selectedOperation : newOperation
+        
+        guard item.operation != .none else { return }
+        operand1 = Double(showingNumber.stringToNumber())
+        operand2 = .none
     }
     
     private func judgeEqualPressed(item: CalculationButton) {
-        if item == .equal {
-            let operand1: Double = operand1 ?? 0
-            let operand2: Double = operand2 ?? 0
-            print(operand1, operand2)
-            switch selectedOperation {
-            case .plus:
-                showingNumber = "\(operand1 + operand2)".removeLastPointZero()
-            case .minus:
-                showingNumber = "\(operand1 - operand2)".removeLastPointZero()
-            case .multiply:
-                showingNumber = "\(operand1 * operand2)".removeLastPointZero()
-            case .divide:
-                showingNumber = "\(operand1 / operand2)".removeLastPointZero()
-            case .remain:
-                showingNumber = "\(operand1.truncatingRemainder(dividingBy: operand2))".removeLastPointZero()
-            case .none:
-                break
-            }
-            self.operand1 = .none
-            self.operand2 = .none
-            selectedOperation = .none
+        guard item == .equal else { return }
+        
+        let operand1: Double = operand1 ?? 0
+        let operand2: Double = operand2 ?? 0
+        switch selectedOperation {
+        case .plus:
+            let result = operand1 + operand2
+            showingNumber = "\(result)".removeLastPointZero()
+        case .minus:
+            let result = operand1 - operand2
+            showingNumber = "\(result)".removeLastPointZero()
+        case .multiply:
+            let result = operand1 * operand2
+            showingNumber = "\(result)".removeLastPointZero()
+        case .divide:
+            let result = operand1 / operand2
+            showingNumber = "\(result)".removeLastPointZero()
+        case .none:
+            break
         }
+        showingNumber = showingNumber.createRestIfNeeded(showingNumber)
+        self.operand1 = .none
+        self.operand2 = .none
+        selectedOperation = .none
     }
 }
 

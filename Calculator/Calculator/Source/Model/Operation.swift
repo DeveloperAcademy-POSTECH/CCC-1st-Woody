@@ -13,5 +13,4 @@ enum Operation {
     case minus
     case multiply
     case divide
-    case remain
 }
