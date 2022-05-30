@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     private let buttonGap: CGFloat = 12
-    private let maxCharacterLength: Int = Int(9)
     private let buttons: [[CalculationButton]] = [
-        [.reset, .sign, .remain, .divide],
+        [.reset, .sign, .percent, .divide],
         [.seven, .eight, .nine, .multi],
         [.four, .five, .six, .minus],
         [.one, .two, .three, .plus],
@@ -21,7 +20,18 @@ struct ContentView: View {
     @State private var operand1: Double? = .none
     @State private var operand2: Double? = .none
     @State private var selectedOperation: Operation = .none
-    
+    private var dragGesture: some Gesture {
+      DragGesture()
+        .onChanged { _ in
+          // 드래그 상태가 변경될 때마다 애니메이션과 함께 포지션을 변경시킨다.
+          withAnimation(.interactiveSpring()) {
+              print("HELLO")
+//            positionX = action.location.x
+//            positionY = max(action.location.y, 0)
+          }
+        }
+    }
+
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -46,11 +56,6 @@ struct ContentView: View {
                 }
             }
         }
-//        .onReceive(managershowingNumber) { _ in
-//            if maxCharacterLength < text.count {
-//                text = String(text.prefix(maxCharacterLength))
-//            }
-//        }
     }
     
     private func createButton(_ item: CalculationButton) -> some View {
