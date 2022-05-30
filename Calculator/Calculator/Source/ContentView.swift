@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     private let buttonGap: CGFloat = 12
+    private let maxCharacterLength: Int = Int(9)
     private let buttons: [[CalculationButton]] = [
         [.reset, .sign, .remain, .divide],
         [.seven, .eight, .nine, .multi],
@@ -28,11 +29,13 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("\(showingNumber)")
-                        .font(.system(size: 100))
+                    Text("\(showingNumber.createRestIfNeeded())")
+                        .font(.system(size: 90))
                         .fontWeight(.light)
                         .foregroundColor(.white)
                         .padding(.trailing, 30)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
                 ForEach(buttons, id: \.self) { row in
                     HStack(spacing: 8) {
@@ -43,6 +46,11 @@ struct ContentView: View {
                 }
             }
         }
+//        .onReceive(managershowingNumber) { _ in
+//            if maxCharacterLength < text.count {
+//                text = String(text.prefix(maxCharacterLength))
+//            }
+//        }
     }
     
     private func createButton(_ item: CalculationButton) -> some View {
@@ -76,25 +84,45 @@ extension ContentView {
 // MARK: Logic
 extension ContentView {
     private func pressButton(item: CalculationButton) {
+        judgeDotPressed(item: item)
         judgeNumberPressed(item: item)
         judgeACPressed(item: item)
         judgeOperationPressed(item: item)
         judgeEqualPressed(item: item)
     }
     
-    private func judgeNumberPressed(item: CalculationButton) {
-        guard let item = Int(item.rawValue) else { return }
-        if selectedOperation != .none {
-            initCalculation(with: item, to: &operand2)
-        } else {
-            initCalculation(with: item, to: &operand1)
+    private func judgeDotPressed(item: CalculationButton) {
+        if item == .dot {
+            let item = item.rawValue
+            if selectedOperation == .none {
+                writeDotCalculation(with: item, to: &operand1)
+            } else {
+                writeDotCalculation(with: item, to: &operand2)
+            }
         }
     }
     
-    private func initCalculation(with item: Int,
-                                 to operand: inout Double?) {
+    private func writeDotCalculation(with item: String,
+                                     to operand: inout Double?) {
+        let newShowingNumber = operand == .none ?  "0\(item)" : "\(showingNumber)\(item)"
+        showingNumber = newShowingNumber
+        operand = Double(showingNumber)
+    }
+    
+    private func judgeNumberPressed(item: CalculationButton) {
+        guard let item = Int(item.rawValue) else { return }
+        if selectedOperation == .none {
+            writeNumberCalculation(with: item, to: &operand1)
+        } else {
+            writeNumberCalculation(with: item, to: &operand2)
+        }
+    }
+    
+    private func writeNumberCalculation(with item: Int,
+                                        to operand: inout Double?) {
         let newOperand1ShowingNumber: String = (operand == .none) ? "\(item)" : "\(showingNumber)\(item)"
         let newOperand2ShowingNumber: String = (operand != .none) ? "\(showingNumber)\(item)" : "\(item)"
+        
         showingNumber = operand == operand1 ? newOperand1ShowingNumber : newOperand2ShowingNumber
         operand = Double(showingNumber)
     }
@@ -121,7 +149,6 @@ extension ContentView {
         if item == .equal {
             let operand1: Double = operand1 ?? 0
             let operand2: Double = operand2 ?? 0
-            // TODO: 삭제해야할 것
             print(operand1, operand2)
             switch selectedOperation {
             case .plus:
