@@ -27,6 +27,9 @@ enum CalculationButton: String {
     case minus  = "-"
     case plus   = "+"
     case equal  = "="
+}
+
+extension CalculationButton {
     
     var backgroundColor: Color {
         switch self {
@@ -48,9 +51,18 @@ enum CalculationButton: String {
         }
     }
     
-    @ViewBuilder
-    var button: some View {
-        CalculationButtonView(item: self)
+    var operation: Operation {
+        switch self {
+        case .plus:
+            return .plus
+        case .minus:
+            return .minus
+        case .multi:
+            return .multiply
+        case .divide:
+            return  .divide
+        default:
+            return .none
+        }
     }
-    
 }
