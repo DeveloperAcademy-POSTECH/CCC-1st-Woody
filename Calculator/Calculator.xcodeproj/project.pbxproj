@@ -15,6 +15,9 @@
 		EF87B926283F664400B8F48B /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B925283F664400B8F48B /* CalculatorUITests.swift */; };
 		EF87B928283F664400B8F48B /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B927283F664400B8F48B /* CalculatorUITestsLaunchTests.swift */; };
 		EF87B936283F669400B8F48B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF87B935283F669400B8F48B /* .swiftlint.yml */; };
+		EF87B93E283FBD5700B8F48B /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B93D283FBD5700B8F48B /* UIScreen+.swift */; };
+		EF87B940283FC2AD00B8F48B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B93F283FC2AD00B8F48B /* Pallete.swift */; };
+		EF87B942283FECBA00B8F48B /* CalculationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B941283FECBA00B8F48B /* CalculationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		EF87B925283F664400B8F48B /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		EF87B927283F664400B8F48B /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF87B935283F669400B8F48B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EF87B93D283FBD5700B8F48B /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		EF87B93F283FC2AD00B8F48B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		EF87B941283FECBA00B8F48B /* CalculationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,8 @@
 		EF87B909283F664400B8F48B /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				EF87B90A283F664400B8F48B /* CalculatorApp.swift */,
-				EF87B90C283F664400B8F48B /* ContentView.swift */,
-				EF87B90E283F664400B8F48B /* Assets.xcassets */,
+				EF87B945283FED7200B8F48B /* Source */,
+				EF87B944283FED6D00B8F48B /* Resource */,
 				EF87B910283F664400B8F48B /* Preview Content */,
 			);
 			path = Calculator;
@@ -128,6 +133,42 @@
 				EF87B927283F664400B8F48B /* CalculatorUITestsLaunchTests.swift */,
 			);
 			path = CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		EF87B944283FED6D00B8F48B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EF87B93F283FC2AD00B8F48B /* Pallete.swift */,
+				EF87B90E283F664400B8F48B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EF87B945283FED7200B8F48B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EF87B947283FED9100B8F48B /* Model */,
+				EF87B946283FED7D00B8F48B /* Extensions */,
+				EF87B90A283F664400B8F48B /* CalculatorApp.swift */,
+				EF87B90C283F664400B8F48B /* ContentView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EF87B946283FED7D00B8F48B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF87B93D283FBD5700B8F48B /* UIScreen+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF87B947283FED9100B8F48B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF87B941283FECBA00B8F48B /* CalculationButton.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF87B90D283F664400B8F48B /* ContentView.swift in Sources */,
+				EF87B93E283FBD5700B8F48B /* UIScreen+.swift in Sources */,
+				EF87B942283FECBA00B8F48B /* CalculationButton.swift in Sources */,
 				EF87B90B283F664400B8F48B /* CalculatorApp.swift in Sources */,
+				EF87B940283FC2AD00B8F48B /* Pallete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

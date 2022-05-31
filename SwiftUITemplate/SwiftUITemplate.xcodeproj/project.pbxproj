@@ -17,6 +17,7 @@
 		EF64431F283E117D00CD84FB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF64431E283E117D00CD84FB /* .swiftlint.yml */; };
 		EF644322283E125400CD84FB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF644321283E125400CD84FB /* Colors.xcassets */; };
 		EF644327283E1C4F00CD84FB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF644326283E1C4F00CD84FB /* View+.swift */; };
+		EF87B938283FBCFB00B8F48B /* Screen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B937283FBCFB00B8F48B /* Screen+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EF64431E283E117D00CD84FB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EF644321283E125400CD84FB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EF644326283E1C4F00CD84FB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		EF87B937283FBCFB00B8F48B /* Screen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				EF644326283E1C4F00CD84FB /* View+.swift */,
+				EF87B937283FBCFB00B8F48B /* Screen+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				EF6442F6283E10FA00CD84FB /* ContentView.swift in Sources */,
 				EF644327283E1C4F00CD84FB /* View+.swift in Sources */,
 				EF6442F4283E10FA00CD84FB /* SwiftUITemplateApp.swift in Sources */,
+				EF87B938283FBCFB00B8F48B /* Screen+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
