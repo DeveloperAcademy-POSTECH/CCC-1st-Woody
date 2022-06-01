@@ -7,11 +7,6 @@
 
 import UIKit
 
-final class TodayViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+final class TodayViewController: BaseViewController {
 
 }

@@ -20,6 +20,8 @@
 		EF6D0F392847EAA7004F5CEB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */; };
 		EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */; };
 		EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */; };
+		EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */; };
+		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		EF6D0F292847E014004F5CEB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D0F432847EE1C004F5CEB /* Protocols */,
 				EF6D0F402847EC45004F5CEB /* Base Architecture */,
 				EF6D0F2B2847E06F004F5CEB /* Extensions */,
 			);
@@ -172,8 +177,17 @@
 		EF6D0F402847EC45004F5CEB /* Base Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */,
 			);
 			path = "Base Architecture";
+			sourceTree = "<group>";
+		};
+		EF6D0F432847EE1C004F5CEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +289,12 @@
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
 				EF6D0F362847EA6B004F5CEB /* MainTabBarController.swift in Sources */,
 				EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */,
+				EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */,
 				EF6D0F392847EAA7004F5CEB /* TodayViewController.swift in Sources */,
 				EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */,
 				EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */,
 				EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */,
+				EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
