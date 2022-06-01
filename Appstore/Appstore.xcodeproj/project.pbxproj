@@ -83,13 +83,10 @@
 		EF6D0F252847DE59004F5CEB /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EF6D0F292847E014004F5CEB /* Common */,
-				EF6D0F2A2847E01A004F5CEB /* Views */,
 				EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */,
 				EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */,
-				EF6D0F142847DE4E004F5CEB /* ViewController.swift */,
-				EF6D0F162847DE4E004F5CEB /* Main.storyboard */,
-				EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */,
+				EF6D0F292847E014004F5CEB /* Common */,
+				EF6D0F2A2847E01A004F5CEB /* Views */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -105,6 +102,8 @@
 		EF6D0F2A2847E01A004F5CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D0F322847E331004F5CEB /* Main */,
+				EF6D0F332847E337004F5CEB /* Launch */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +116,23 @@
 				EF6D0F302847E1DA004F5CEB /* UILabel+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF6D0F322847E331004F5CEB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F142847DE4E004F5CEB /* ViewController.swift */,
+				EF6D0F162847DE4E004F5CEB /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EF6D0F332847E337004F5CEB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
