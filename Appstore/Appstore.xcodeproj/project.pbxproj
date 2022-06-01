@@ -14,6 +14,9 @@
 		EF6D0F1A2847DE4F004F5CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F192847DE4F004F5CEB /* Assets.xcassets */; };
 		EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */; };
 		EF6D0F282847DEF9004F5CEB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F272847DEF9004F5CEB /* .swiftlint.yml */; };
+		EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */; };
+		EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */; };
+		EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F302847E1DA004F5CEB /* UILabel+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		EF6D0F1C2847DE4F004F5CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF6D0F1E2847DE4F004F5CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6D0F272847DEF9004F5CEB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		EF6D0F302847E1DA004F5CEB /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		EF6D0F252847DE59004F5CEB /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D0F292847E014004F5CEB /* Common */,
+				EF6D0F2A2847E01A004F5CEB /* Views */,
 				EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */,
 				EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */,
 				EF6D0F142847DE4E004F5CEB /* ViewController.swift */,
@@ -84,6 +92,31 @@
 				EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		EF6D0F292847E014004F5CEB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F2B2847E06F004F5CEB /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EF6D0F2A2847E01A004F5CEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF6D0F2B2847E06F004F5CEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */,
+				EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */,
+				EF6D0F302847E1DA004F5CEB /* UILabel+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
 				EF6D0F152847DE4E004F5CEB /* ViewController.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
+				EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */,
+				EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */,
 				EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
