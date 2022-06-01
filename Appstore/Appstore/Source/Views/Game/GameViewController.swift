@@ -7,28 +7,11 @@
 
 import UIKit
 
-final class GameViewController: BaseViewController {
-    private let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    override func attribute() {
-        super.attribute()
-        setupLabel()
+final class GameViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
     }
-    
-    private func setupLabel() {
-        label.text = "게임"
-    }
-    
-    override func layout() {
-        super.layout()
-        
-        view.addSubview(label)
-        label.snp.makeConstraints {
-            $0.center.equalTo(self.view.snp.center)
-        }
-    }
+
 }
