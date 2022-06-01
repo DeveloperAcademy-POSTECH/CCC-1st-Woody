@@ -11,9 +11,8 @@
 		EF2940D4284495CA004BE45D /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2940D3284495CA004BE45D /* String+.swift */; };
 		EF6D0EFD2847D8E1004F5CEB /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0EFC2847D8E1004F5CEB /* TextButton.swift */; };
 		EF6D0EFF2847D8ED004F5CEB /* ZeroButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0EFE2847D8ED004F5CEB /* ZeroButton.swift */; };
-		EF6D0F012847D8F6004F5CEB /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F002847D8F6004F5CEB /* ImageButton.swift */; };
 		EF87B90B283F664400B8F48B /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B90A283F664400B8F48B /* CalculatorApp.swift */; };
-		EF87B90D283F664400B8F48B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B90C283F664400B8F48B /* ContentView.swift */; };
+		EF87B90D283F664400B8F48B /* CalculationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B90C283F664400B8F48B /* CalculationView.swift */; };
 		EF87B90F283F664400B8F48B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF87B90E283F664400B8F48B /* Assets.xcassets */; };
 		EF87B912283F664400B8F48B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF87B911283F664400B8F48B /* Preview Assets.xcassets */; };
 		EF87B91C283F664400B8F48B /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF87B91B283F664400B8F48B /* CalculatorTests.swift */; };
@@ -47,10 +46,9 @@
 		EF2940D3284495CA004BE45D /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		EF6D0EFC2847D8E1004F5CEB /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		EF6D0EFE2847D8ED004F5CEB /* ZeroButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroButton.swift; sourceTree = "<group>"; };
-		EF6D0F002847D8F6004F5CEB /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		EF87B907283F664400B8F48B /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF87B90A283F664400B8F48B /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
-		EF87B90C283F664400B8F48B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF87B90C283F664400B8F48B /* CalculationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationView.swift; sourceTree = "<group>"; };
 		EF87B90E283F664400B8F48B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF87B911283F664400B8F48B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF87B917283F664400B8F48B /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 			children = (
 				EF6D0EFC2847D8E1004F5CEB /* TextButton.swift */,
 				EF6D0EFE2847D8ED004F5CEB /* ZeroButton.swift */,
-				EF6D0F002847D8F6004F5CEB /* ImageButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -103,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EF87B90A283F664400B8F48B /* CalculatorApp.swift */,
-				EF87B90C283F664400B8F48B /* ContentView.swift */,
+				EF87B90C283F664400B8F48B /* CalculationView.swift */,
 				EF6D0F022847D8FE004F5CEB /* Buttons */,
 			);
 			path = Views;
@@ -356,13 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6D0EFF2847D8ED004F5CEB /* ZeroButton.swift in Sources */,
-				EF87B90D283F664400B8F48B /* ContentView.swift in Sources */,
+				EF87B90D283F664400B8F48B /* CalculationView.swift in Sources */,
 				EF87B93E283FBD5700B8F48B /* UIScreen+.swift in Sources */,
 				EF87B942283FECBA00B8F48B /* CalculationButton.swift in Sources */,
 				EF87B90B283F664400B8F48B /* CalculatorApp.swift in Sources */,
 				EF6D0EFD2847D8E1004F5CEB /* TextButton.swift in Sources */,
 				EF87B940283FC2AD00B8F48B /* Pallete.swift in Sources */,
-				EF6D0F012847D8F6004F5CEB /* ImageButton.swift in Sources */,
 				EF2940D4284495CA004BE45D /* String+.swift in Sources */,
 				EF2940D2284442C1004BE45D /* Operation.swift in Sources */,
 			);

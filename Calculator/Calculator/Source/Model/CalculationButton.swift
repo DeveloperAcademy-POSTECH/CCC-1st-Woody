@@ -30,7 +30,7 @@ enum CalculationButton: String {
 }
 
 extension CalculationButton {
-    var image: Image {
+    var image: Image? {
         switch self {
         case .sign:
             return .init(systemName: "plus.forwardslash.minus")
@@ -47,7 +47,7 @@ extension CalculationButton {
         case .equal:
             return .init(systemName: "equal")
         default:
-            return .init(systemName: "")
+            return nil
         }
     }
     

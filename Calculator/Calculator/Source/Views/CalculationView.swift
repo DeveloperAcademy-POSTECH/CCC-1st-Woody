@@ -49,14 +49,15 @@ struct CalculationView: View {
     
     private func createButton(_ item: CalculationButton) -> some View {
         switch item {
-        case .equal, .minus, .plus, .divide, .percent, .multi, .sign:
-            return AnyView(ImageButton(item: item) {
-                pressButton(item: item)
-            })
         case .zero:
             return AnyView(ZeroButton(item: item) {
                 pressButton(item: item)
             })
+//        case .equal, .minus, .plus, .divide, .percent, .multi, .sign:
+//            return AnyView(ImageButton(item: item) {
+//                pressButton(item: item)
+//            })
+//    
         default:
             return AnyView(TextButton(item: item) {
                 pressButton(item: item)

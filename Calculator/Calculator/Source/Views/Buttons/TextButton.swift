@@ -12,7 +12,7 @@ struct TextButton: View {
     var action: (() -> Void)
     var body: some View {
         Button(action: action) {
-            Text(item.rawValue)
+            judgeTextOrImage()
                 .font(.system(size: 32))
                 .frame(
                     width: CalculationView.buttonSize(item: item).width,
@@ -25,4 +25,10 @@ struct TextButton: View {
         }
     }
     
+    private func judgeTextOrImage() -> some View {
+        if let image = item.image {
+            return Text(image)
+        }
+        return Text(item.rawValue)
+    }
 }
