@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    private let buttonGap: CGFloat = 12
+struct CalculationView: View {
+    static let buttonGap: CGFloat = 12
     private let buttons: [[CalculationButton]] = [
         [.reset, .sign, .percent, .divide],
         [.seven, .eight, .nine, .multi],
@@ -48,64 +48,35 @@ struct ContentView: View {
     }
     
     private func createButton(_ item: CalculationButton) -> some View {
-        Button {
-            pressButton(item: item)
-        } label: {
-            switch item {
-            case .equal, .minus, .plus, .divide, .percent, .multi, .sign:
-                item.image
-                    .font(.system(size: 32))
-                    .frame(
-                        width: self.buttonSize(item: item).width,
-                        height: self.buttonSize(item: item).height,
-                        alignment: .center
-                    )
-                    .background(item.backgroundColor)
-                    .foregroundColor(item.textColor)
-                    .cornerRadius(self.buttonSize(item: item).width / 2)
-            case .zero:
-                HStack {
-                    Text(item.rawValue)
-                        .font(.system(size: 35))
-                        .padding(.leading, 30) // TODO: 30 계산 무지성으로 넣었다............ 고쳐야합니다.
-                    Spacer()
-                }
-                .frame(
-                    width: self.buttonSize(item: item).width,
-                    height: self.buttonSize(item: item).height,
-                    alignment: .center
-                )
-                .background(item.backgroundColor)
-                .foregroundColor(item.textColor)
-                .cornerRadius(self.buttonSize(item: item).width / 2)
-            default:
-                Text(item.rawValue)
-                    .font(.system(size: 35))
-                    .frame(
-                        width: self.buttonSize(item: item).width,
-                        height: self.buttonSize(item: item).height,
-                        alignment: .center
-                    )
-                    .background(item.backgroundColor)
-                    .foregroundColor(item.textColor)
-                    .cornerRadius(self.buttonSize(item: item).width / 2)
-            }
+        switch item {
+        case .equal, .minus, .plus, .divide, .percent, .multi, .sign:
+            return AnyView(ImageButton(item: item) {
+                pressButton(item: item)
+            })
+        case .zero:
+            return AnyView(ZeroButton(item: item) {
+                pressButton(item: item)
+            })
+        default:
+            return AnyView(TextButton(item: item) {
+                pressButton(item: item)
+            })
         }
     }
 }
 
 // MARK: UI
-extension ContentView {
-    private func buttonSize(item: CalculationButton) -> CGSize {
-        var width: CGFloat = (UIScreen.screenWidth - buttonGap * 5) / 4
+extension CalculationView {
+    static func buttonSize(item: CalculationButton) -> CGSize {
+        var width: CGFloat = (UIScreen.screenWidth - CalculationView.buttonGap * 5) / 4
         let height: CGFloat = width
-        if item == .zero { width = width * 2 + buttonGap }
+        if item == .zero { width = width * 2 + CalculationView.buttonGap }
         return CGSize(width: width, height: height)
     }
 }
 
 // MARK: Logic
-extension ContentView {
+extension CalculationView {
     private func pressButton(item: CalculationButton) {
         judgeDotPressed(item: item)
         judgeNumberPressed(item: item)
@@ -190,8 +161,8 @@ extension ContentView {
     
     private func judgeOperationPressed(item: CalculationButton) {
         let newOperation = item.operation
-        selectedOperation = newOperation == .none ? selectedOperation : newOperation
         
+        selectedOperation = newOperation == .none ? selectedOperation : newOperation
         guard item.operation != .none else { return }
         operand1 = Double(showingNumber.stringToNumber())
         operand2 = .none
@@ -227,7 +198,7 @@ extension ContentView {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CalculationView()
             .previewInterfaceOrientation(.portrait)
     }
 }
