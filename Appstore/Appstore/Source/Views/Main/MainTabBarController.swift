@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainTabBarController: UITabBarController {
+final class MainTabBarController: UITabBarController, CodeBasedView {
     private let todayViewController: UINavigationController = {
         let todayViewController = TodayViewController()
         return todayViewController.wrappedByNavigationController()
@@ -54,24 +54,44 @@ final class MainTabBarController: UITabBarController {
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
         
-        todayViewController.tabBarItem = todayTabBarItem
-        gameViewController.tabBarItem = gameTabBarItem
-        appViewController.tabBarItem = appTabBarItem
-        acadeViewController.tabBarItem = acadeTabBarItem
-        searchViewController.tabBarItem = searchTabBarItem
-        
-        setViewControllers([todayViewController, gameViewController, appViewController, acadeViewController, searchViewController], animated: false)
+        let viewControllers = [todayViewController, gameViewController, appViewController, acadeViewController, searchViewController]
+        viewControllers
+            .enumerated()
+            .forEach {
+            $0.element.tabBarItem = UITabBarItem(title: tabItems[$0.offset].rawValue,
+                                                 image: tabItems[$0.offset].image,
+                                                 selectedImage: nil)
+        }
+        setViewControllers(viewControllers, animated: false)
     }
     
     func layout() { }
     
 }
 
-enum TabItem {
-    case today
-    case game
-    case app
-    case arcade
-    case search
+enum TabItem: String {
+    case today = "투데이"
+    case game = "게임"
+    case app = "앱"
+    case arcade = "Arcade"
+    case search = "검색"
     
+    var title: String {
+        return self.rawValue
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .today:
+            return .init(systemName: "doc.text.image")
+        case .game:
+            return .init(systemName: "car")
+        case .app:
+            return .init(systemName: "square.stack.3d.up.fill")
+        case .arcade:
+            return .init(systemName: "gamecontroller.fill")
+        case .search:
+            return .init(systemName: "magnifyingglass")
+        }
+    }
 }
