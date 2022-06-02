@@ -8,9 +8,27 @@
 import UIKit
 
 final class ArcadeViewController: BaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    private let label: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    override func attribute() {
+        super.attribute()
+        setupLabel()
+    }
+    
+    private func setupLabel() {
+        label.text = "아케이드"
+    }
+    
+    override func layout() {
+        super.layout()
+        
+        view.addSubview(label)
+        label.snp.makeConstraints {
+            $0.center.equalTo(self.view.snp.center)
+        }
     }
 }

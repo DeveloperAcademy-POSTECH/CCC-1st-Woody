@@ -8,5 +8,27 @@
 import UIKit
 
 final class AppViewController: BaseViewController {
-
+    private let label: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    override func attribute() {
+        super.attribute()
+        setupLabel()
+    }
+    
+    private func setupLabel() {
+        label.text = "앱"
+    }
+    
+    override func layout() {
+        super.layout()
+        
+        view.addSubview(label)
+        label.snp.makeConstraints {
+            $0.center.equalTo(self.view.snp.center)
+        }
+    }
 }
