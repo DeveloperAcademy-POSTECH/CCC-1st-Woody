@@ -24,10 +24,14 @@ final class MainTabBarController: UITabBarController, CodeBasedView {
         return navigationController
     }()
     private let acadeViewController: UINavigationController = {
-        return UINavigationController()
+        let arcadeViewController = ArcadeViewController()
+        let navigationController = UINavigationController(rootViewController: arcadeViewController)
+        return navigationController
     }()
     private let searchViewController: UINavigationController = {
-        return UINavigationController()
+        let searchViewController = SearchViewController()
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        return navigationController
     }()
     private let tabItems: [TabItem] = [.today, .game, .app, .arcade, .search]
 
