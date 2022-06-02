@@ -24,6 +24,7 @@
 		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
 		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
 		EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94922848EE350067A63F /* SearchViewController.swift */; };
+		EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94942848EEF10067A63F /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
 		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
 		EFAF94922848EE350067A63F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EFAF94942848EEF10067A63F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */,
 				EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */,
 				EF6D0F302847E1DA004F5CEB /* UILabel+.swift */,
+				EFAF94942848EEF10067A63F /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */,
 				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
 				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,

@@ -10,28 +10,23 @@ import UIKit
 final class MainTabBarController: UITabBarController, CodeBasedView {
     private let todayViewController: UINavigationController = {
         let todayViewController = TodayViewController()
-        let navigationController = UINavigationController(rootViewController: todayViewController)
-        return navigationController
+        return todayViewController.wrappedByNavigationController()
     }()
     private let gameViewController: UINavigationController = {
         let gameViewController = GameViewController()
-        let navigationController = UINavigationController(rootViewController: gameViewController)
-        return navigationController
+        return gameViewController.wrappedByNavigationController()
     }()
     private let appViewController: UINavigationController = {
         let appViewController = AppViewController()
-        let navigationController = UINavigationController(rootViewController: appViewController)
-        return navigationController
+        return appViewController.wrappedByNavigationController()
     }()
     private let acadeViewController: UINavigationController = {
         let arcadeViewController = ArcadeViewController()
-        let navigationController = UINavigationController(rootViewController: arcadeViewController)
-        return navigationController
+        return arcadeViewController.wrappedByNavigationController()
     }()
     private let searchViewController: UINavigationController = {
         let searchViewController = SearchViewController()
-        let navigationController = UINavigationController(rootViewController: searchViewController)
-        return navigationController
+        return searchViewController.wrappedByNavigationController()
     }()
     private let tabItems: [TabItem] = [.today, .game, .app, .arcade, .search]
 
