@@ -51,5 +51,27 @@ final class MainTabBarController: UITabBarController {
     
     private func setupViewControllers() {
         setViewControllers(viewControllersToShow, animated: false)
+        tabBar.barTintColor = .white
+        tabBar.backgroundColor = .white
+        
+        todayViewController.tabBarItem = todayTabBarItem
+        gameViewController.tabBarItem = gameTabBarItem
+        appViewController.tabBarItem = appTabBarItem
+        acadeViewController.tabBarItem = acadeTabBarItem
+        searchViewController.tabBarItem = searchTabBarItem
+        
+        setViewControllers([todayViewController, gameViewController, appViewController, acadeViewController, searchViewController], animated: false)
     }
+    
+    func layout() { }
+    
+}
+
+enum TabItem {
+    case today
+    case game
+    case app
+    case arcade
+    case search
+    
 }
