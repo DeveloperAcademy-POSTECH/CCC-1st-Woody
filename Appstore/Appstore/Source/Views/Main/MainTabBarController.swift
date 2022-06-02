@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainTabBarController: UITabBarController, CodeBasedView {
+final class MainTabBarController: UITabBarController {
     private let todayViewController: UINavigationController = {
         let todayViewController = TodayViewController()
         return todayViewController.wrappedByNavigationController()
@@ -62,36 +62,16 @@ final class MainTabBarController: UITabBarController, CodeBasedView {
                                                  image: tabItems[$0.offset].image,
                                                  selectedImage: nil)
         }
-        setViewControllers(viewControllers, animated: false)
+        setupViewControllers()
     }
     
-    func layout() { }
-    
-}
-
-enum TabItem: String {
-    case today = "투데이"
-    case game = "게임"
-    case app = "앱"
-    case arcade = "Arcade"
-    case search = "검색"
-    
-    var title: String {
-        return self.rawValue
+    private func setupTabBarItems(index: Int) -> UITabBarItem {
+        return UITabBarItem(title: tabItems[index].rawValue,
+                            image: tabItems[index].image,
+                            selectedImage: nil)
     }
     
-    var image: UIImage? {
-        switch self {
-        case .today:
-            return .init(systemName: "doc.text.image")
-        case .game:
-            return .init(systemName: "car")
-        case .app:
-            return .init(systemName: "square.stack.3d.up.fill")
-        case .arcade:
-            return .init(systemName: "gamecontroller.fill")
-        case .search:
-            return .init(systemName: "magnifyingglass")
-        }
+    private func setupViewControllers() {
+        setViewControllers(viewControllersToShow, animated: false)
     }
 }
