@@ -16,7 +16,9 @@ class BaseViewController: UIViewController, CodeBasedView {
         layout()
     }
     
-    func attribute() { }
+    func attribute() {
+        view.backgroundColor = .white
+    }
     
     func layout() { }
     
