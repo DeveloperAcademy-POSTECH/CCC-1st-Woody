@@ -8,40 +8,29 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController, CodeBasedView {
-   
     private let todayViewController: UINavigationController = {
         let todayViewController = TodayViewController()
         let navigationController = UINavigationController(rootViewController: todayViewController)
         return navigationController
     }()
-    
     private let gameViewController: UINavigationController = {
         let gameViewController = GameViewController()
         let navigationController = UINavigationController(rootViewController: gameViewController)
         return navigationController
     }()
-    
     private let appViewController: UINavigationController = {
         let appViewController = AppViewController()
         let navigationController = UINavigationController(rootViewController: appViewController)
         return navigationController
     }()
-    
     private let acadeViewController: UINavigationController = {
         return UINavigationController()
     }()
-    
     private let searchViewController: UINavigationController = {
         return UINavigationController()
     }()
-    
-    private let todayTabBarItem = UITabBarItem(title: "투데이", image: nil, selectedImage: nil)
-    
-    private let gameTabBarItem = UITabBarItem(title: "게임", image: nil, selectedImage: nil)
-    private let appTabBarItem = UITabBarItem(title: "앱", image: nil, selectedImage: nil)
-    private let acadeTabBarItem = UITabBarItem(title: "Arcade", image: nil, selectedImage: nil)
-    private let searchTabBarItem = UITabBarItem(title: "검색", image: nil, selectedImage: nil)
-    
+    private let tabItems: [TabItem] = [.today, .game, .app, .arcade, .search]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,24 +41,44 @@ final class MainTabBarController: UITabBarController, CodeBasedView {
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
         
-        todayViewController.tabBarItem = todayTabBarItem
-        gameViewController.tabBarItem = gameTabBarItem
-        appViewController.tabBarItem = appTabBarItem
-        acadeViewController.tabBarItem = acadeTabBarItem
-        searchViewController.tabBarItem = searchTabBarItem
-        
-        setViewControllers([todayViewController, gameViewController, appViewController, acadeViewController, searchViewController], animated: false)
+        let viewControllers = [todayViewController, gameViewController, appViewController, acadeViewController, searchViewController]
+        viewControllers
+            .enumerated()
+            .forEach {
+            $0.element.tabBarItem = UITabBarItem(title: tabItems[$0.offset].rawValue,
+                                                 image: tabItems[$0.offset].image,
+                                                 selectedImage: nil)
+        }
+        setViewControllers(viewControllers, animated: false)
     }
     
     func layout() { }
     
 }
 
-enum TabItem {
-    case today
-    case game
-    case app
-    case arcade
-    case search
+enum TabItem: String {
+    case today = "투데이"
+    case game = "게임"
+    case app = "앱"
+    case arcade = "Arcade"
+    case search = "검색"
     
+    var title: String {
+        return self.rawValue
+    }
+    
+    var image: UIImage? {
+        switch self {
+        case .today:
+            return .init(systemName: "doc.text.image")
+        case .game:
+            return .init(systemName: "car")
+        case .app:
+            return .init(systemName: "square.stack.3d.up.fill")
+        case .arcade:
+            return .init(systemName: "gamecontroller.fill")
+        case .search:
+            return .init(systemName: "magnifyingglass")
+        }
+    }
 }
