@@ -25,6 +25,7 @@
 		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
 		EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94922848EE350067A63F /* SearchViewController.swift */; };
 		EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94942848EEF10067A63F /* UIViewController+.swift */; };
+		EFAF94972848F0CD0067A63F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94962848F0CD0067A63F /* TabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
 		EFAF94922848EE350067A63F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EFAF94942848EEF10067A63F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		EFAF94962848F0CD0067A63F /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EF6D0F352847EA6B004F5CEB /* MainTabBarController.swift */,
+				EFAF94962848F0CD0067A63F /* TabItem.swift */,
 				EF6D0F162847DE4E004F5CEB /* Main.storyboard */,
 			);
 			path = Main;
@@ -317,6 +320,7 @@
 				EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */,
 				EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */,
 				EF6D0F392847EAA7004F5CEB /* TodayViewController.swift in Sources */,
+				EFAF94972848F0CD0067A63F /* TabItem.swift in Sources */,
 				EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */,
 				EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */,
 				EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */,
