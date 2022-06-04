@@ -9,28 +9,48 @@ import UIKit
 import SnapKit
 
 final class TodayViewController: BaseViewController, Storyboarded {
-    private let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func attribute() {
         super.attribute()
-        setupLabel()
-    }
-    
-    private func setupLabel() {
-        label.text = "투데이"
         
+        collectionView.backgroundColor = .white
+        collectionView.registerWithNib(HeaderCollectionViewCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
-    
+   
     override func layout() {
         super.layout()
         
-        view.addSubview(label)
-        label.snp.makeConstraints {
-            $0.center.equalTo(self.view.snp.center)
-        }
+    }
+}
+
+extension TodayViewController: UICollectionViewDataSource {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return 1
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(HeaderCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
+        return cell
+    }
+}
+
+extension TodayViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        return CGSize(width: DeviceInfo.width, height: 1000)
     }
 }
