@@ -8,12 +8,15 @@
 import UIKit
 
 class ContentCollectionViewCell: BaseCollectionViewCell {
-
     @IBOutlet weak var containerView: UIView!
+    
     override func attribute() {
         super.attribute()
-        containerView.layer.cornerRadius = 12
-        containerView.layer.masksToBounds = true
-        containerView.backgroundColor = .red
+        containerView.addRadius(12) 
+        containerView.setBackgroundColor(.red)
+        containerView.addShadow(color: .black.withAlphaComponent(0.4),
+                                opacity: 0.4,
+                                offset: .init(width: 0, height: 3),
+                                radius: 10)
     }
 }
