@@ -10,12 +10,14 @@ import SnapKit
 
 final class TodayViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var collectionView: UICollectionView!
+        
+    private let contents: [String] = ["", "", "", "", "", "", ""]
     
     override func attribute() {
         super.attribute()
         
-        collectionView.backgroundColor = .white
         collectionView.registerWithNib(HeaderCollectionViewCell.self)
+        collectionView.registerWithNib(ContentCollectionViewCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -31,16 +33,37 @@ extension TodayViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 1
+        return 6
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
+        if indexPath.row == 0 {
+            return createHeaderCollectionViewCell(for: indexPath)
+        } else {
+            return createContentCollectionViewCell(for: indexPath)
+        }
+    }
+    
+    private func createHeaderCollectionViewCell(
+        for indexPath: IndexPath
+    ) -> HeaderCollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(HeaderCollectionViewCell.self,
                                                             for: indexPath)
         else { fatalError() }
+        
+        return cell
+    }
+    
+    private func createContentCollectionViewCell(
+        for indexPath: IndexPath
+    ) -> ContentCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(ContentCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
+        
         return cell
     }
 }
@@ -51,6 +74,11 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: DeviceInfo.width, height: 1000)
+        if indexPath.row == 0 {
+            return CGSize(width: DeviceInfo.width, height: 80)
+        } else {
+            return CGSize(width: DeviceInfo.width, height: 450)
+        }
+        
     }
 }
