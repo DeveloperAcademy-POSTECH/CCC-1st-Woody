@@ -15,4 +15,10 @@ extension UIViewController {
         navigationController.isNavigationBarHidden = true
         return navigationController
     }
+    
+    func instantiate() -> Self {
+        let storyboardName = String(describing: self)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        return storyboard.instantiateInitialViewController() as! Self
+    }
 }

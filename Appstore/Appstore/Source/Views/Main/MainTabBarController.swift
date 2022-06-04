@@ -9,7 +9,7 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
     private let todayViewController: UINavigationController = {
-        let todayViewController = TodayViewController()
+        let todayViewController = TodayViewController.instantiate()
         return todayViewController.wrappedByNavigationController()
     }()
     private let gameViewController: UINavigationController = {
