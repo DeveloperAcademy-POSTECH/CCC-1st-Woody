@@ -26,6 +26,7 @@
 		EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */; };
 		EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */; };
 		EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */; };
+		EF9709EF284BC8E500D64714 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = EF9709EE284BC8E500D64714 /* FlexLayout */; };
 		EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */; };
 		EFA7B974284B4181006671EF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7B973284B4181006671EF /* Storyboarded.swift */; };
 		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
@@ -79,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAF949A2848F1F80067A63F /* SnapKit in Frameworks */,
+				EF9709EF284BC8E500D64714 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +279,7 @@
 			name = Appstore;
 			packageProductDependencies = (
 				EFAF94992848F1F80067A63F /* SnapKit */,
+				EF9709EE284BC8E500D64714 /* FlexLayout */,
 			);
 			productName = Appstore;
 			productReference = EF6D0F0D2847DE4E004F5CEB /* Appstore.app */;
@@ -308,6 +311,7 @@
 			mainGroup = EF6D0F042847DE4E004F5CEB;
 			packageReferences = (
 				EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EF9709ED284BC8E500D64714 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = EF6D0F0E2847DE4E004F5CEB /* Products */;
 			projectDirPath = "";
@@ -600,6 +604,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EF9709ED284BC8E500D64714 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -611,6 +623,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EF9709EE284BC8E500D64714 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF9709ED284BC8E500D64714 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
 		EFAF94992848F1F80067A63F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */;
