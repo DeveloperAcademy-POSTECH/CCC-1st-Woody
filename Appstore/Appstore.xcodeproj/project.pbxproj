@@ -24,6 +24,8 @@
 		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
 		EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */; };
 		EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */; };
+		EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */; };
+		EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */; };
 		EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */; };
 		EFA7B974284B4181006671EF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7B973284B4181006671EF /* Storyboarded.swift */; };
 		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
@@ -57,6 +59,8 @@
 		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
 		EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayViewController.storyboard; sourceTree = "<group>"; };
 		EFA7B973284B4181006671EF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */,
 				EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */,
 				EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */,
+				EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */,
+				EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */,
 				EF6D0F282847DEF9004F5CEB /* .swiftlint.yml in Resources */,
 				EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */,
 				EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */,
@@ -358,6 +365,7 @@
 				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
 				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
 				EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */,
+				EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
 				EF6D0F362847EA6B004F5CEB /* MainTabBarController.swift in Sources */,
 				EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */,
