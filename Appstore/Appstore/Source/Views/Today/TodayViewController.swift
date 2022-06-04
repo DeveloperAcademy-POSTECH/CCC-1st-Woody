@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class TodayViewController: BaseViewController {
+final class TodayViewController: BaseViewController, Storyboarded {
     private let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
