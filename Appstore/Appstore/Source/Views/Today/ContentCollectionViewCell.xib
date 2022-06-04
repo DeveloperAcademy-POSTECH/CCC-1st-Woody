@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaL-oT-qeK">
-                        <rect key="frame" x="12" y="12" width="366" height="452"/>
+                        <rect key="frame" x="12" y="12" width="366" height="440"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-Of-vIp">
                                 <rect key="frame" x="16" y="16" width="334" height="334"/>
@@ -38,7 +38,7 @@
             <constraints>
                 <constraint firstItem="OaL-oT-qeK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="PGd-w2-gFy"/>
                 <constraint firstAttribute="trailing" secondItem="OaL-oT-qeK" secondAttribute="trailing" constant="12" id="lz6-Ax-OZh"/>
-                <constraint firstAttribute="bottom" secondItem="OaL-oT-qeK" secondAttribute="bottom" id="vPB-5b-3rI"/>
+                <constraint firstAttribute="bottom" secondItem="OaL-oT-qeK" secondAttribute="bottom" constant="12" id="vPB-5b-3rI"/>
                 <constraint firstItem="OaL-oT-qeK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="zlj-nx-Nkd"/>
             </constraints>
             <size key="customSize" width="390" height="464"/>
