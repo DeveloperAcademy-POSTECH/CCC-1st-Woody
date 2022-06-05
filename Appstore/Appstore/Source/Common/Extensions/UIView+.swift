@@ -18,6 +18,14 @@ extension UIView {
         self.layer.cornerRadius = 12
     }
     
+    func addBorder(
+        _ color: UIColor,
+        _ width: CGFloat
+    ) {
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
+    }
+    
     func setBackgroundColor(_ color: UIColor) {
         self.backgroundColor = color
     }

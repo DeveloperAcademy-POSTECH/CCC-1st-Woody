@@ -11,7 +11,7 @@ import SnapKit
 final class TodayViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var collectionView: UICollectionView!
         
-    private let contents: [String] = ["", "", "", "", "", "", ""]
+    private let contents: [String] = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     override func attribute() {
         super.attribute()
