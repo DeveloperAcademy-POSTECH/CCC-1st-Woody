@@ -13,7 +13,7 @@ final class MainTabBarController: UITabBarController {
         return todayViewController.wrappedByNavigationController()
     }()
     private let gameViewController: UINavigationController = {
-        let gameViewController = GameViewController()
+        let gameViewController = GameViewController.instantiate()
         return gameViewController.wrappedByNavigationController()
     }()
     private let appViewController: UINavigationController = {
