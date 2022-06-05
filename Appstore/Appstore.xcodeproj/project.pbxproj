@@ -22,6 +22,7 @@
 		EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */; };
 		EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */; };
 		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
+		EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9496B3284CA74300654FD7 /* GameViewController.storyboard */; };
 		EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */; };
 		EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */; };
 		EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */; };
@@ -58,6 +59,7 @@
 		EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
+		EF9496B3284CA74300654FD7 /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
+				EF9496B3284CA74300654FD7 /* GameViewController.storyboard */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */,
 				EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */,
 				EF6D0F1A2847DE4F004F5CEB /* Assets.xcassets in Resources */,
+				EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */,
 				EF6D0F182847DE4E004F5CEB /* Main.storyboard in Resources */,
 				EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */,
 			);

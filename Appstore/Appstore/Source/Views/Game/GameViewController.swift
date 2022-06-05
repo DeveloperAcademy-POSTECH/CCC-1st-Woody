@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class GameViewController: BaseViewController {
+final class GameViewController: BaseViewController, Storyboarded {
     private let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
