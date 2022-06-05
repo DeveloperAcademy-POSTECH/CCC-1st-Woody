@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderCollectionViewCell: BaseCollectionViewCell {
+final class HeaderCollectionViewCell: BaseCollectionViewCellWithNib {
     @IBOutlet weak var profileImageView: UIImageView!
     
     override func attribute() {
