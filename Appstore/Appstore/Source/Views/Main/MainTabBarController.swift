@@ -14,7 +14,10 @@ final class MainTabBarController: UITabBarController {
     }()
     private let gameViewController: UINavigationController = {
         let gameViewController = GameViewController.instantiate()
-        return gameViewController.wrappedByNavigationController()
+        let navigationController = gameViewController.wrappedByNavigationController()
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.isNavigationBarHidden = false
+        return navigationController
     }()
     private let appViewController: UINavigationController = {
         let appViewController = AppViewController()
