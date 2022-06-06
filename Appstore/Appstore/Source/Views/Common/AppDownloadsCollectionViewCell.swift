@@ -11,7 +11,7 @@ import SwiftUI
 
 class AppDownloadsCollectionViewCell<Content: View>: BaseCollectionViewCell {
     private weak var hostingController: UIHostingController<Content>?
-    
+    let bottomInset: CGFloat = 16
     func host(_ view: Content, parent: UIViewController) {
         if let hostingController = hostingController {
             hostingController.rootView = view
@@ -29,7 +29,8 @@ class AppDownloadsCollectionViewCell<Content: View>: BaseCollectionViewCell {
             newHostingController.view.snp.makeConstraints {
                 $0.leading.equalTo(self.contentView).offset(16)
                 $0.trailing.equalTo(self.contentView).inset(16)
-                $0.top.bottom.equalTo(self.contentView)
+                $0.top.equalTo(self.contentView)
+                $0.bottom.equalTo(self.contentView).inset(bottomInset)
             }
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppDownloadView: View {
     static let imageSize: CGSize = CGSize(width: 50, height: 50)
-    static let cellHeight: CGFloat = 80.0
+    static let cellHeight: CGFloat = 60.0
     var body: some View {
         HStack {
             Image("photo2")
@@ -39,7 +39,7 @@ struct AppDownloadView: View {
                     }
                 }
             }
-        }
+        }.frame(height: AppDownloadView.cellHeight)
     }
 }
 

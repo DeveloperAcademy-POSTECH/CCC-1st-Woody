@@ -17,6 +17,7 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     override init(frame: CGRect) {
@@ -25,7 +26,7 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
         contentView.addSubViews(collectionView)
         collectionView.snp.makeConstraints {
             $0.leading.top.trailing.bottom.equalTo(self.contentView)
-            let height: CGFloat = AppDownloadViews.spacing * 4 + (AppDownloadView.imageSize.height * 3)
+            let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
             $0.height.equalTo(height)
         }
     }
@@ -62,8 +63,9 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let height: CGFloat = AppDownloadViews.spacing * 4 + (AppDownloadView.imageSize.height * 3)
-        return .init(width: DeviceInfo.width, height: height)
+        let width: CGFloat  = DeviceInfo.width - 16 * 2
+        let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
+        return .init(width: width, height: height)
     }
     func collectionView(
         _ collectionView: UICollectionView,

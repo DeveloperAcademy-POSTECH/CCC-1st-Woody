@@ -30,11 +30,6 @@ final class GameViewController: BaseViewController, Storyboarded {
         collectionView.register(GameHeaderCollectionViewCell.self)
         collectionView.register(GameListCollectionViewCell.self)
     }
-    
-    override func layout() {
-        super.layout()
-        
-    }
 }
 
 extension GameViewController: UICollectionViewDataSource {
@@ -76,7 +71,9 @@ extension GameViewController: UICollectionViewDataSource {
     private func gameHeaderCollectionViewCell(
         for indexPath: IndexPath
     ) -> GameHeaderCollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(GameHeaderCollectionViewCell.self, for: indexPath) else { fatalError() }
+        guard let cell = collectionView.dequeueReusableCell(GameHeaderCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
         
         return cell
     }
@@ -84,7 +81,9 @@ extension GameViewController: UICollectionViewDataSource {
     private func gameListCollectionViewCell(
         for indexPath: IndexPath
     ) -> GameListCollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(GameListCollectionViewCell.self, for: indexPath) else { fatalError() }
+        guard let cell = collectionView.dequeueReusableCell(GameListCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
         cell.parentController = self
         return cell
     }
@@ -96,9 +95,8 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        guard let section = Section(rawValue: indexPath.section) else {
-            fatalError()
-        }
+        guard let section = Section(rawValue: indexPath.section)
+        else { fatalError() }
         switch section {
         case .nowProgress:
             return .init(width: DeviceInfo.width, height: 60)
@@ -106,10 +104,9 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
             if indexPath.row == 0 {
                 return .init(width: DeviceInfo.width, height: 60)
             } else {
-                let height: CGFloat = AppDownloadViews.spacing * 4 + (AppDownloadView.imageSize.height * 3)
+                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
                 return .init(width: DeviceInfo.width, height: height)
             }
         }
-        
     }
 }
