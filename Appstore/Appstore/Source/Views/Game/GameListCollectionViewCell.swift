@@ -7,28 +7,76 @@
 
 import UIKit
 
-final class GameListCollectionViewCell: UICollectionViewCell {
+final class GameListCollectionViewCell: BaseCollectionViewCell {
+    weak var parentController: UIViewController?
     private lazy var collectionView: UICollectionView = {
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.isPagingEnabled = true
         return collectionView
     }()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        collectionView.register(AppDownloadsCollectionViewCell<AppDownloadViews>.self)
+        contentView.addSubViews(collectionView)
+        collectionView.snp.makeConstraints {
+            $0.leading.top.trailing.bottom.equalTo(self.contentView)
+            let height: CGFloat = AppDownloadViews.spacing * 4 + (AppDownloadView.imageSize.height * 3)
+            $0.height.equalTo(height)
+        }
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
 
 extension GameListCollectionViewCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(AppDownloadsCollectionViewCell<AppDownloadViews>.self,
+                                                            for: indexPath)
+        else { fatalError() }
+        cell.host(AppDownloadViews(), parent: parentController!)
+        return cell
     }
     
 }
 
 extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let height: CGFloat = AppDownloadViews.spacing * 4 + (AppDownloadView.imageSize.height * 3)
+        return .init(width: DeviceInfo.width, height: height)
+    }
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+    ) -> CGFloat {
+        return 0
+    }
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumInteritemSpacingForSectionAt section: Int
+    ) -> CGFloat {
+        return 0
+    }
 }
