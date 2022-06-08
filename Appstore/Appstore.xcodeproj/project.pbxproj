@@ -159,7 +159,6 @@
 		EF6D0F2A2847E01A004F5CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF871E49284CEF19009D6400 /* Common */,
 				EF6D0F322847E331004F5CEB /* Main */,
 				EF6D0F372847EA8E004F5CEB /* Today */,
 				EF6D0F3A2847EAA9004F5CEB /* Game */,
@@ -218,8 +217,10 @@
 		EF6D0F3A2847EAA9004F5CEB /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				EF871E49284CEF19009D6400 /* SwiftUI */,
 				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
 				EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */,
+				EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */,
 				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
 				EF9496B3284CA74300654FD7 /* GameViewController.storyboard */,
 			);
@@ -252,14 +253,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		EF871E49284CEF19009D6400 /* Common */ = {
+		EF871E49284CEF19009D6400 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				EF871E4E284CF02D009D6400 /* AppDownloadView.swift */,
 				EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */,
-				EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */,
 			);
-			path = Common;
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		EFAF948E2848EE1F0067A63F /* Arcade */ = {
