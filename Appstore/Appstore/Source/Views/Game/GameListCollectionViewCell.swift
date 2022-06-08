@@ -9,6 +9,9 @@ import UIKit
 
 final class GameListCollectionViewCell: BaseCollectionViewCell {
     weak var parentController: UIViewController?
+    static let width: CGFloat = DeviceInfo.width - 32
+    static let minimumLineSpacing: CGFloat = 13
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -17,6 +20,8 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.decelerationRate = .fast
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         return collectionView
     }()
     override init(frame: CGRect) {
@@ -62,7 +67,7 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        let width: CGFloat  = DeviceInfo.width - 16 * 2
+        let width: CGFloat  = GameListCollectionViewCell.width
         let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
         return .init(width: width, height: height)
     }
@@ -71,7 +76,7 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAt section: Int
     ) -> CGFloat {
-        return 0
+        return GameListCollectionViewCell.minimumLineSpacing
     }
     func collectionView(
         _ collectionView: UICollectionView,
@@ -79,5 +84,31 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         minimumInteritemSpacingForSectionAt section: Int
     ) -> CGFloat {
         return 0
+    }
+}
+
+extension GameListCollectionViewCell: UICollectionViewDelegate {
+    func scrollViewWillEndDragging(
+        _ scrollView: UIScrollView,
+        withVelocity velocity: CGPoint,
+        targetContentOffset: UnsafeMutablePointer<CGPoint>
+    ) {
+        let inset: CGFloat = DeviceInfo.width - GameListCollectionViewCell.width
+        let width: CGFloat = DeviceInfo.width - inset
+        
+        let cellWidthIncludingSpacing = width + GameListCollectionViewCell.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        var roundedIndex = round(index)
+        
+        if scrollView.contentOffset.x > targetContentOffset.pointee.x {
+            roundedIndex = floor(index)
+        } else {
+            roundedIndex = ceil(index)
+        }
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
     }
 }

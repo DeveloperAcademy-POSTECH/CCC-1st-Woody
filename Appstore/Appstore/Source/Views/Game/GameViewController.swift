@@ -112,5 +112,3 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
-
-

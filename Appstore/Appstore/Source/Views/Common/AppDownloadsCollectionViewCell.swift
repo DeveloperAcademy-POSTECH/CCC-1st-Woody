@@ -27,8 +27,8 @@ class AppDownloadsCollectionViewCell<Content: View>: BaseCollectionViewCell {
             
             newHostingController.view.translatesAutoresizingMaskIntoConstraints = false
             newHostingController.view.snp.makeConstraints {
-                $0.leading.equalTo(self.contentView).offset(16)
-                $0.trailing.equalTo(self.contentView).inset(16)
+                $0.leading.equalTo(self.contentView)
+                $0.trailing.equalTo(self.contentView)
                 $0.top.equalTo(self.contentView)
                 $0.bottom.equalTo(self.contentView).inset(bottomInset)
             }
