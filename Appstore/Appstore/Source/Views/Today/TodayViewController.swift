@@ -75,7 +75,7 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         if indexPath.row == 0 {
-            return CGSize(width: DeviceInfo.width, height: 80)
+            return CGSize(width: DeviceInfo.width, height: 92)
         } else {
             return CGSize(width: DeviceInfo.width, height: 450)
         }

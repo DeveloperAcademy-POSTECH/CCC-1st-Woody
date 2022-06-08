@@ -16,7 +16,6 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
@@ -36,6 +35,7 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
     
 }
 
+// MARK: UICollectionViewDataSource
 extension GameListCollectionViewCell: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -43,7 +43,6 @@ extension GameListCollectionViewCell: UICollectionViewDataSource {
     ) -> Int {
         return 5
     }
-    
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
@@ -54,9 +53,9 @@ extension GameListCollectionViewCell: UICollectionViewDataSource {
         cell.host(AppDownloadViews(), parent: parentController!)
         return cell
     }
-    
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,

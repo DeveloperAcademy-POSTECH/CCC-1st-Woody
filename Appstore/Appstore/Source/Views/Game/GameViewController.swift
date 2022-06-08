@@ -32,6 +32,7 @@ final class GameViewController: BaseViewController, Storyboarded {
     }
 }
 
+// MARK: UICollectionViewDataSource
 extension GameViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -89,6 +90,7 @@ extension GameViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension GameViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -110,3 +112,5 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+

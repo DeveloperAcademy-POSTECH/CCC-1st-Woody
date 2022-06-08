@@ -13,6 +13,6 @@ final class HeaderCollectionViewCell: BaseCollectionViewCellWithNib {
     override func attribute() {
         super.attribute()
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
-        profileImageView.backgroundColor = .magenta
+        profileImageView.backgroundColor = .black
     }
 }
