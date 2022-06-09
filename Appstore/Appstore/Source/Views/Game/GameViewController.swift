@@ -120,13 +120,13 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
         else { fatalError() }
         switch section {
         case .nowProgress:
-            let height: CGFloat = CurrentProgressAppView.imageSize.height + 100
+            let height: CGFloat = CurrentProgressAppView.imageSize.height + 200
             return .init(width: DeviceInfo.width, height: height)
         default:
             if indexPath.row == 0 {
                 return .init(width: DeviceInfo.width, height: 48)
             } else {
-                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3
+                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
                 return .init(width: DeviceInfo.width, height: height)
             }
         }
