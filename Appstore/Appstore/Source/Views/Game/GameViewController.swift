@@ -1,4 +1,4 @@
-//
+// https://stackoverflow.com/questions/47062176/image-for-navigation-bar-with-large-title-ios-11
 //  GameViewController.swift
 //  Appstore
 //
@@ -10,6 +10,12 @@ import UIKit
 final class GameViewController: BaseViewController, Storyboarded {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let imageView: UIImageView = {
+        let image = UIImage(named: "photo")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     private enum Section: Int {
         case nowProgress
         case freeGameRanking
@@ -27,8 +33,11 @@ final class GameViewController: BaseViewController, Storyboarded {
         self.title = "게임"
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(GameTopCollectionViewCell.self)
         collectionView.register(GameHeaderCollectionViewCell.self)
         collectionView.register(GameListCollectionViewCell.self)
+        imageView.backgroundColor = .black
+        imageView.addRadius(40)
     }
 }
 
@@ -59,7 +68,7 @@ extension GameViewController: UICollectionViewDataSource {
         guard let section = Section(rawValue: indexPath.section) else { fatalError() }
         switch section {
         case .nowProgress:
-            return gameHeaderCollectionViewCell(for: indexPath)
+            return gameTopCollectionViewCell(for: indexPath)
         default:
             if indexPath.row == 0 {
                 return gameHeaderCollectionViewCell(for: indexPath)
@@ -67,6 +76,16 @@ extension GameViewController: UICollectionViewDataSource {
                 return gameListCollectionViewCell(for: indexPath)
             }
         }
+    }
+    
+    private func gameTopCollectionViewCell(
+        for indexPath: IndexPath
+    ) -> GameTopCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(GameTopCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
+        cell.parentController = self
+        return cell
     }
     
     private func gameHeaderCollectionViewCell(
@@ -101,7 +120,8 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
         else { fatalError() }
         switch section {
         case .nowProgress:
-            return .init(width: DeviceInfo.width, height: 60)
+            let height: CGFloat = CurrentProgressAppView.imageSize.height + 100
+            return .init(width: DeviceInfo.width, height: height)
         default:
             if indexPath.row == 0 {
                 return .init(width: DeviceInfo.width, height: 60)

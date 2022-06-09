@@ -8,10 +8,10 @@
 
 import UIKit
 import SwiftUI
+import SnapKit
 
-class AppDownloadsCollectionViewCell<Content: View>: BaseCollectionViewCell {
+class HostingCollectionViewCell<Content: View>: BaseCollectionViewCell {
     private weak var hostingController: UIHostingController<Content>?
-    let bottomInset: CGFloat = 16
     func host(_ view: Content, parent: UIViewController) {
         if let hostingController = hostingController {
             hostingController.rootView = view
@@ -30,7 +30,7 @@ class AppDownloadsCollectionViewCell<Content: View>: BaseCollectionViewCell {
                 $0.leading.equalTo(self.contentView)
                 $0.trailing.equalTo(self.contentView)
                 $0.top.equalTo(self.contentView)
-                $0.bottom.equalTo(self.contentView).inset(bottomInset)
+                $0.bottom.equalTo(self.contentView)
             }
         }
     }

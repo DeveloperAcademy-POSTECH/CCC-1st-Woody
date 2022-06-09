@@ -26,7 +26,7 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView.register(AppDownloadsCollectionViewCell<AppDownloadViews>.self)
+        collectionView.register(HostingCollectionViewCell<AppDownloadViews>.self)
         contentView.addSubViews(collectionView)
         collectionView.snp.makeConstraints {
             $0.leading.top.trailing.bottom.equalTo(self.contentView)
@@ -52,7 +52,7 @@ extension GameListCollectionViewCell: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(AppDownloadsCollectionViewCell<AppDownloadViews>.self,
+        guard let cell = collectionView.dequeueReusableCell(HostingCollectionViewCell<AppDownloadViews>.self,
                                                             for: indexPath)
         else { fatalError() }
         cell.host(AppDownloadViews(), parent: parentController!)
@@ -68,7 +68,7 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width: CGFloat  = GameListCollectionViewCell.width
-        let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
+        let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16 // TODO: 반응형으로 맞추기
         return .init(width: width, height: height)
     }
     func collectionView(
