@@ -228,10 +228,10 @@
 		EF6D0F3A2847EAA9004F5CEB /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
-				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
 				EF6DC8B5285044C800582872 /* GameList */,
 				EF6DC8B6285044F400582872 /* GameTop */,
+				EF6DC8BF2851799C00582872 /* Header */,
+				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
 				EF9496B3284CA74300654FD7 /* GameViewController.storyboard */,
 			);
 			path = Game;
@@ -288,6 +288,14 @@
 				EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		EF6DC8BF2851799C00582872 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		EFAF948E2848EE1F0067A63F /* Arcade */ = {

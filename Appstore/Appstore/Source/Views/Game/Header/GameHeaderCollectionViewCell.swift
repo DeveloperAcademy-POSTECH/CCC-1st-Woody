@@ -44,7 +44,6 @@ final class GameHeaderCollectionViewCell: BaseCollectionViewCell {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self.divider.snp.top).offset(10)
             $0.leading.equalTo(self.contentView.snp.leading).offset(16)
-            $0.centerY.equalTo(self.contentView.snp.centerY)
         }
         button.snp.makeConstraints {
             $0.centerY.equalTo(self.titleLabel.snp.centerY)

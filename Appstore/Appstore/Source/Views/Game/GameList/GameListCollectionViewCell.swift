@@ -9,7 +9,7 @@ import UIKit
 
 final class GameListCollectionViewCell: BaseCollectionViewCell {
     weak var parentController: UIViewController?
-    static let width: CGFloat = DeviceInfo.width - 32
+    static let width: CGFloat = DeviceInfo.width - 40
     static let minimumLineSpacing: CGFloat = 13
     
     private lazy var collectionView: UICollectionView = {
@@ -21,7 +21,7 @@ final class GameListCollectionViewCell: BaseCollectionViewCell {
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         return collectionView
     }()
     override init(frame: CGRect) {
@@ -68,7 +68,7 @@ extension GameListCollectionViewCell: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         let width: CGFloat  = GameListCollectionViewCell.width
-        let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16 // TODO: 반응형으로 맞추기
+        let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3
         return .init(width: width, height: height)
     }
     func collectionView(
