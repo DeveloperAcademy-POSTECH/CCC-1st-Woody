@@ -63,7 +63,7 @@ extension TodayViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(ContentCollectionViewCell.self,
                                                             for: indexPath)
         else { fatalError() }
-        
+        cell.layer.masksToBounds = false
         return cell
     }
 }

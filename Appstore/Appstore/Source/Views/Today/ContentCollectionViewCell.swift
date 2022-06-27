@@ -20,8 +20,8 @@ class ContentCollectionViewCell: BaseCollectionViewCell {
         containerView.setBackgroundColor(.red)
         shadowView.addRadius(12)
         shadowView.addShadow(color: .black.withAlphaComponent(0.4),
-                                opacity: 0.4,
-                                offset: .init(width: 0, height: 3),
+                                opacity: 0.5,
+                                offset: .init(width: 0, height: 8),
                                 radius: 10)
         appViews.forEach {
             $0.addRadius(15)
