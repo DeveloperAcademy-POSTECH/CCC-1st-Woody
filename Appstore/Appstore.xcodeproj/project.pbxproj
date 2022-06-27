@@ -26,9 +26,6 @@
 		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
 		EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9496B3284CA74300654FD7 /* GameViewController.storyboard */; };
 		EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */; };
-		EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */; };
-		EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */; };
-		EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */; };
 		EF9709EF284BC8E500D64714 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = EF9709EE284BC8E500D64714 /* FlexLayout */; };
 		EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */; };
 		EFA7B974284B4181006671EF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7B973284B4181006671EF /* Storyboarded.swift */; };
@@ -41,6 +38,7 @@
 		EFD0D084284B4E710033566F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D083284B4E710033566F /* UIView+.swift */; };
 		EFD0D086284B516F0033566F /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D085284B516F0033566F /* UIStackView+.swift */; };
 		EFD0D089284B7E690033566F /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D088284B7E690033566F /* DeviceInfo.swift */; };
+		EFD6EBF7286A0AA00023BA16 /* TodayHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +63,6 @@
 		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
 		EF9496B3284CA74300654FD7 /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayViewController.storyboard; sourceTree = "<group>"; };
 		EFA7B973284B4181006671EF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +73,7 @@
 		EFD0D083284B4E710033566F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		EFD0D085284B516F0033566F /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		EFD0D088284B7E690033566F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +197,7 @@
 				EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */,
 				EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */,
 				EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */,
-				EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */,
-				EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */,
-				EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */,
+				EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */,
 				EF475A9C2866E92E003BA54B /* TodayType1Cell.swift */,
 			);
 			path = Today;
@@ -336,14 +330,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */,
 				EF6D0F282847DEF9004F5CEB /* .swiftlint.yml in Resources */,
 				EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */,
 				EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */,
 				EF6D0F1A2847DE4F004F5CEB /* Assets.xcassets in Resources */,
 				EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */,
 				EF6D0F182847DE4E004F5CEB /* Main.storyboard in Resources */,
-				EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,9 +369,9 @@
 			files = (
 				EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */,
 				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
+				EFD6EBF7286A0AA00023BA16 /* TodayHeaderCell.swift in Sources */,
 				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
 				EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */,
-				EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
 				EF6D0F362847EA6B004F5CEB /* MainTabBarController.swift in Sources */,
 				EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */,
