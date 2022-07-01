@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */; };
 		EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */; };
-		EF6D0F152847DE4E004F5CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F142847DE4E004F5CEB /* ViewController.swift */; };
 		EF6D0F182847DE4E004F5CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F162847DE4E004F5CEB /* Main.storyboard */; };
 		EF6D0F1A2847DE4F004F5CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F192847DE4F004F5CEB /* Assets.xcassets */; };
 		EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */; };
@@ -17,13 +16,23 @@
 		EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */; };
 		EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */; };
 		EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F302847E1DA004F5CEB /* UILabel+.swift */; };
+		EF6D0F362847EA6B004F5CEB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F352847EA6B004F5CEB /* MainTabBarController.swift */; };
+		EF6D0F392847EAA7004F5CEB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */; };
+		EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */; };
+		EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */; };
+		EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */; };
+		EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */; };
+		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
+		EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94922848EE350067A63F /* SearchViewController.swift */; };
+		EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94942848EEF10067A63F /* UIViewController+.swift */; };
+		EFAF94972848F0CD0067A63F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF94962848F0CD0067A63F /* TabItem.swift */; };
+		EFAF949A2848F1F80067A63F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EFAF94992848F1F80067A63F /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF6D0F0D2847DE4E004F5CEB /* Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF6D0F142847DE4E004F5CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF6D0F172847DE4E004F5CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6D0F192847DE4F004F5CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6D0F1C2847DE4F004F5CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +41,16 @@
 		EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		EF6D0F302847E1DA004F5CEB /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		EF6D0F352847EA6B004F5CEB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
+		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
+		EFAF94922848EE350067A63F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EFAF94942848EEF10067A63F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		EFAF94962848F0CD0067A63F /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF949A2848F1F80067A63F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,8 @@
 		EF6D0F292847E014004F5CEB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EF6D0F432847EE1C004F5CEB /* Protocols */,
+				EF6D0F402847EC45004F5CEB /* Base Architecture */,
 				EF6D0F2B2847E06F004F5CEB /* Extensions */,
 			);
 			path = Common;
@@ -103,6 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				EF6D0F322847E331004F5CEB /* Main */,
+				EF6D0F372847EA8E004F5CEB /* Today */,
+				EF6D0F3A2847EAA9004F5CEB /* Game */,
+				EF6D0F3D2847EABA004F5CEB /* App */,
+				EFAF948E2848EE1F0067A63F /* Arcade */,
+				EFAF94912848EE2C0067A63F /* Search */,
 				EF6D0F332847E337004F5CEB /* Launch */,
 			);
 			path = Views;
@@ -114,6 +141,7 @@
 				EF6D0F2C2847E086004F5CEB /* UICollectionView+.swift */,
 				EF6D0F2E2847E1AD004F5CEB /* UITableView+.swift */,
 				EF6D0F302847E1DA004F5CEB /* UILabel+.swift */,
+				EFAF94942848EEF10067A63F /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,7 +149,8 @@
 		EF6D0F322847E331004F5CEB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EF6D0F142847DE4E004F5CEB /* ViewController.swift */,
+				EF6D0F352847EA6B004F5CEB /* MainTabBarController.swift */,
+				EFAF94962848F0CD0067A63F /* TabItem.swift */,
 				EF6D0F162847DE4E004F5CEB /* Main.storyboard */,
 			);
 			path = Main;
@@ -133,6 +162,62 @@
 				EF6D0F1B2847DE4F004F5CEB /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		EF6D0F372847EA8E004F5CEB /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		EF6D0F3A2847EAA9004F5CEB /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EF6D0F3D2847EABA004F5CEB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F3E2847EAC3004F5CEB /* AppViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EF6D0F402847EC45004F5CEB /* Base Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */,
+			);
+			path = "Base Architecture";
+			sourceTree = "<group>";
+		};
+		EF6D0F432847EE1C004F5CEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D0F442847EE2B004F5CEB /* CodeBasedView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFAF948E2848EE1F0067A63F /* Arcade */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */,
+			);
+			path = Arcade;
+			sourceTree = "<group>";
+		};
+		EFAF94912848EE2C0067A63F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EFAF94922848EE350067A63F /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +237,9 @@
 			dependencies = (
 			);
 			name = Appstore;
+			packageProductDependencies = (
+				EFAF94992848F1F80067A63F /* SnapKit */,
+			);
 			productName = Appstore;
 			productReference = EF6D0F0D2847DE4E004F5CEB /* Appstore.app */;
 			productType = "com.apple.product-type.application";
@@ -180,6 +268,9 @@
 				Base,
 			);
 			mainGroup = EF6D0F042847DE4E004F5CEB;
+			packageReferences = (
+				EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EF6D0F0E2847DE4E004F5CEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,12 +320,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */,
+				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
 				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
-				EF6D0F152847DE4E004F5CEB /* ViewController.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
+				EF6D0F362847EA6B004F5CEB /* MainTabBarController.swift in Sources */,
+				EF6D0F3C2847EAB8004F5CEB /* GameViewController.swift in Sources */,
+				EF6D0F422847EDF2004F5CEB /* BaseViewController.swift in Sources */,
+				EF6D0F392847EAA7004F5CEB /* TodayViewController.swift in Sources */,
+				EFAF94972848F0CD0067A63F /* TabItem.swift in Sources */,
 				EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */,
+				EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */,
+				EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */,
 				EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */,
 				EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */,
+				EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +550,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFAF94992848F1F80067A63F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFAF94982848F1F80067A63F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF6D0F052847DE4E004F5CEB /* Project object */;
 }
