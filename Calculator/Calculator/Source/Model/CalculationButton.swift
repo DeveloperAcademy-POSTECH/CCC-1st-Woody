@@ -27,8 +27,10 @@ enum CalculationButton: String {
     case minus  = "􀅽"
     case plus   = "􀅼"
     case equal  = "􀆀"
-    
-    var image: Image {
+}
+
+extension CalculationButton {
+    var image: Image? {
         switch self {
         case .sign:
             return .init(systemName: "plus.forwardslash.minus")
@@ -45,7 +47,7 @@ enum CalculationButton: String {
         case .equal:
             return .init(systemName: "equal")
         default:
-            return .init(systemName: "")
+            return nil
         }
     }
     
@@ -69,9 +71,18 @@ enum CalculationButton: String {
         }
     }
     
-    @ViewBuilder
-    var button: some View {
-        CalculationButtonView(item: self)
+    var operation: Operation {
+        switch self {
+        case .plus:
+            return .plus
+        case .minus:
+            return .minus
+        case .multi:
+            return .multiply
+        case .divide:
+            return  .divide
+        default:
+            return .none
+        }
     }
-    
 }
