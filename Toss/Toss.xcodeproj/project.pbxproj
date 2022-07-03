@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0FF6152871DF49002FBED6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF6142871DF49002FBED6 /* Home.swift */; };
+		EF0FF6192871E1AA002FBED6 /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF6182871E1AA002FBED6 /* Benefit.swift */; };
+		EF0FF61B2871E1B9002FBED6 /* Remittance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF61A2871E1B9002FBED6 /* Remittance.swift */; };
+		EF0FF61D2871E1CF002FBED6 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF61C2871E1CF002FBED6 /* Stock.swift */; };
+		EF0FF61F2871E1E1002FBED6 /* Whole.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF61E2871E1E1002FBED6 /* Whole.swift */; };
+		EF0FF6212871E547002FBED6 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF6202871E547002FBED6 /* Tab.swift */; };
+		EF0FF62328720430002FBED6 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF62228720430002FBED6 /* TabBarItem.swift */; };
+		EF0FF62728720655002FBED6 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF62628720655002FBED6 /* BottomView.swift */; };
+		EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF207DD528720D43008ED69A /* CustomTabView.swift */; };
 		EFA063752871D1990063F429 /* TossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063742871D1990063F429 /* TossApp.swift */; };
 		EFA063772871D1990063F429 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063762871D1990063F429 /* ContentView.swift */; };
 		EFA063792871D19A0063F429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA063782871D19A0063F429 /* Assets.xcassets */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF0FF6142871DF49002FBED6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EF0FF6182871E1AA002FBED6 /* Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
+		EF0FF61A2871E1B9002FBED6 /* Remittance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remittance.swift; sourceTree = "<group>"; };
+		EF0FF61C2871E1CF002FBED6 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		EF0FF61E2871E1E1002FBED6 /* Whole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whole.swift; sourceTree = "<group>"; };
+		EF0FF6202871E547002FBED6 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		EF0FF62228720430002FBED6 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		EF0FF62628720655002FBED6 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		EF207DD528720D43008ED69A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		EFA063712871D1990063F429 /* Toss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA063742871D1990063F429 /* TossApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossApp.swift; sourceTree = "<group>"; };
 		EFA063762871D1990063F429 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF207DD728721086008ED69A /* CustomTab */ = {
+			isa = PBXGroup;
+			children = (
+				EF0FF62228720430002FBED6 /* TabBarItem.swift */,
+				EF0FF62628720655002FBED6 /* BottomView.swift */,
+				EF207DD528720D43008ED69A /* CustomTabView.swift */,
+			);
+			path = CustomTab;
+			sourceTree = "<group>";
+		};
 		EFA063682871D1990063F429 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +84,13 @@
 			children = (
 				EFA063742871D1990063F429 /* TossApp.swift */,
 				EFA063762871D1990063F429 /* ContentView.swift */,
+				EF207DD728721086008ED69A /* CustomTab */,
+				EF0FF6202871E547002FBED6 /* Tab.swift */,
+				EF0FF6142871DF49002FBED6 /* Home.swift */,
+				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
+				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
+				EF0FF61C2871E1CF002FBED6 /* Stock.swift */,
+				EF0FF61E2871E1E1002FBED6 /* Whole.swift */,
 				EFA063782871D19A0063F429 /* Assets.xcassets */,
 				EFA0637A2871D19A0063F429 /* Preview Content */,
 			);
@@ -164,7 +199,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA063772871D1990063F429 /* ContentView.swift in Sources */,
+				EF0FF6192871E1AA002FBED6 /* Benefit.swift in Sources */,
+				EF0FF61D2871E1CF002FBED6 /* Stock.swift in Sources */,
+				EF0FF62328720430002FBED6 /* TabBarItem.swift in Sources */,
+				EF0FF6212871E547002FBED6 /* Tab.swift in Sources */,
+				EF0FF6152871DF49002FBED6 /* Home.swift in Sources */,
+				EF0FF61B2871E1B9002FBED6 /* Remittance.swift in Sources */,
+				EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */,
 				EFA063752871D1990063F429 /* TossApp.swift in Sources */,
+				EF0FF61F2871E1E1002FBED6 /* Whole.swift in Sources */,
+				EF0FF62728720655002FBED6 /* BottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
