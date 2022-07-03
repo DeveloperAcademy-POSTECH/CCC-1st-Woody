@@ -11,8 +11,8 @@ class BaseViewController: UIViewController, CodeBasedView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        attribute()
         layout()
+        attribute()
     }
     
     func attribute() {

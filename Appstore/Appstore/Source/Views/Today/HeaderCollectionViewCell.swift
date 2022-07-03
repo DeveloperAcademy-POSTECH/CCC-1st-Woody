@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HeaderCollectionViewCell: BaseCollectionViewCell {
+final class HeaderCollectionViewCell: BaseCollectionViewCellWithNib {
     @IBOutlet weak var profileImageView: UIImageView!
     
     override func attribute() {
         super.attribute()
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
-        profileImageView.backgroundColor = .magenta
+        profileImageView.backgroundColor = .black
     }
 }
