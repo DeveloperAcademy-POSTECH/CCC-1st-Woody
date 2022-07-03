@@ -11,6 +11,7 @@
 		EFA063772871D1990063F429 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063762871D1990063F429 /* ContentView.swift */; };
 		EFA063792871D19A0063F429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA063782871D19A0063F429 /* Assets.xcassets */; };
 		EFA0637C2871D19A0063F429 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */; };
+		EFA063842871D26B0063F429 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EFA063832871D26B0063F429 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EFA063762871D1990063F429 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFA063782871D19A0063F429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFA063832871D26B0063F429 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		EFA063682871D1990063F429 = {
 			isa = PBXGroup;
 			children = (
+				EFA063832871D26B0063F429 /* .swiftlint.yml */,
 				EFA063732871D1990063F429 /* Toss */,
 				EFA063722871D1990063F429 /* Products */,
 			);
@@ -74,6 +77,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFA0637F2871D19A0063F429 /* Build configuration list for PBXNativeTarget "Toss" */;
 			buildPhases = (
+				EFA063822871D2270063F429 /* SwiftLint Script */,
 				EFA0636D2871D1990063F429 /* Sources */,
 				EFA0636E2871D1990063F429 /* Frameworks */,
 				EFA0636F2871D1990063F429 /* Resources */,
@@ -125,12 +129,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA063842871D26B0063F429 /* .swiftlint.yml in Resources */,
 				EFA0637C2871D19A0063F429 /* Preview Assets.xcassets in Resources */,
 				EFA063792871D19A0063F429 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EFA063822871D2270063F429 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 설정하기 https://github.com/realm/SwiftLint\n# ⚠️ M1 과 Intel 에서 SwiftLint 파일 경로가 다르기 때문에 주의\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFA0636D2871D1990063F429 /* Sources */ = {
