@@ -17,7 +17,7 @@ final class TodayViewController: BaseViewController, Storyboarded {
         super.attribute()
         
         collectionView.registerWithNib(HeaderCollectionViewCell.self)
-        collectionView.registerWithNib(ContentCollectionViewCell.self)
+        collectionView.registerWithNib(TodayType1Cell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -59,11 +59,11 @@ extension TodayViewController: UICollectionViewDataSource {
     
     private func createContentCollectionViewCell(
         for indexPath: IndexPath
-    ) -> ContentCollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(ContentCollectionViewCell.self,
+    ) -> TodayType1Cell {
+        guard let cell = collectionView.dequeueReusableCell(TodayType1Cell.self,
                                                             for: indexPath)
         else { fatalError() }
-        
+        cell.layer.masksToBounds = false
         return cell
     }
 }
@@ -75,7 +75,7 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         if indexPath.row == 0 {
-            return CGSize(width: DeviceInfo.width, height: 92)
+            return CGSize(width: DeviceInfo.width, height: 80)
         } else {
             return CGSize(width: DeviceInfo.width, height: 450)
         }

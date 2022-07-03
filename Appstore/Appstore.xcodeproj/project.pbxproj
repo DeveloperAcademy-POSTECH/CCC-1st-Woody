@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF475A9D2866E92E003BA54B /* TodayType1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF475A9C2866E92E003BA54B /* TodayType1Cell.swift */; };
+		EF475A9F2866E994003BA54B /* CodeBasedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF475A9E2866E994003BA54B /* CodeBasedCollectionViewCell.swift */; };
 		EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */; };
 		EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */; };
 		EF6D0F182847DE4E004F5CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D0F162847DE4E004F5CEB /* Main.storyboard */; };
@@ -49,9 +51,12 @@
 		EFD0D084284B4E710033566F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D083284B4E710033566F /* UIView+.swift */; };
 		EFD0D086284B516F0033566F /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D085284B516F0033566F /* UIStackView+.swift */; };
 		EFD0D089284B7E690033566F /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0D088284B7E690033566F /* DeviceInfo.swift */; };
+		EFD6EBF7286A0AA00023BA16 /* TodayHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF475A9C2866E92E003BA54B /* TodayType1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayType1Cell.swift; sourceTree = "<group>"; };
+		EF475A9E2866E994003BA54B /* CodeBasedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF6D0F0D2847DE4E004F5CEB /* Appstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6D0F102847DE4E004F5CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6D0F122847DE4E004F5CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 		EFD0D083284B4E710033566F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		EFD0D085284B516F0033566F /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		EFD0D088284B7E690033566F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,8 @@
 				EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */,
 				EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */,
 				EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */,
+				EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */,
+				EF475A9C2866E92E003BA54B /* TodayType1Cell.swift */,
 				EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */,
 				EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */,
 				EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */,
@@ -257,6 +265,7 @@
 			children = (
 				EF6D0F412847EDF2004F5CEB /* BaseViewController.swift */,
 				EFD0D07F284B43140033566F /* BaseCollectionViewCell.swift */,
+				EF475A9E2866E994003BA54B /* CodeBasedCollectionViewCell.swift */,
 			);
 			path = "Base Architecture";
 			sourceTree = "<group>";
@@ -435,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6EBF7286A0AA00023BA16 /* TodayHeaderCell.swift in Sources */,
 				EF9496B8284CCE1500654FD7 /* GameListCollectionViewCell.swift in Sources */,
 				EFAF94952848EEF10067A63F /* UIViewController+.swift in Sources */,
 				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
@@ -453,6 +463,8 @@
 				EFAF94972848F0CD0067A63F /* TabItem.swift in Sources */,
 				EF6D0F2D2847E086004F5CEB /* UICollectionView+.swift in Sources */,
 				EFD0D080284B43140033566F /* BaseCollectionViewCell.swift in Sources */,
+				EF475A9D2866E92E003BA54B /* TodayType1Cell.swift in Sources */,
+				EF475A9F2866E994003BA54B /* CodeBasedCollectionViewCell.swift in Sources */,
 				EF871E53284CF803009D6400 /* HostingCollectionViewCell.swift in Sources */,
 				EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */,
 				EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */,
