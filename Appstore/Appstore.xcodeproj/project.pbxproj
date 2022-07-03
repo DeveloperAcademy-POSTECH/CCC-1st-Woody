@@ -29,6 +29,7 @@
 		EF871E4F284CF02D009D6400 /* AppDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E4E284CF02D009D6400 /* AppDownloadView.swift */; };
 		EF871E51284CF6A9009D6400 /* AppDownloadViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */; };
 		EF871E53284CF803009D6400 /* HostingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */; };
+		EF871E53284CF803009D6400 /* AppDownloadsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */; };
 		EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9496B3284CA74300654FD7 /* GameViewController.storyboard */; };
 		EF9496B6284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */; };
 		EF9496B8284CCE1500654FD7 /* GameListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */; };
@@ -75,6 +76,7 @@
 		EF871E4E284CF02D009D6400 /* AppDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadView.swift; sourceTree = "<group>"; };
 		EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadViews.swift; sourceTree = "<group>"; };
 		EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9496B3284CA74300654FD7 /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,10 @@
 				EF6DC8B6285044F400582872 /* GameTop */,
 				EF6DC8BF2851799C00582872 /* Header */,
 				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
+				EF871E49284CEF19009D6400 /* SwiftUI */,
+				EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */,
+				EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */,
+				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
 				EF9496B3284CA74300654FD7 /* GameViewController.storyboard */,
 			);
 			path = Game;
@@ -458,6 +464,7 @@
 				EF6D0F132847DE4E004F5CEB /* SceneDelegate.swift in Sources */,
 				EF6D0F452847EE2B004F5CEB /* CodeBasedView.swift in Sources */,
 				EF6DC8BB285176D500582872 /* View+.swift in Sources */,
+				EF871E53284CF803009D6400 /* AppDownloadsCollectionViewCell.swift in Sources */,
 				EFA7B974284B4181006671EF /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
