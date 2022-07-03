@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab: Tab
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            ForEach(Tab.allCases, id: \.self) { tab in
+                tab.view
+                    .tabItem {
+                        Label(tab.title, systemImage: tab.systemImageName)
+                    }
+            }
+        }
+        .accentColor(.black)
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(selectedTab: .home)
     }
 }
