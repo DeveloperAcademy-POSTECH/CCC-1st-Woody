@@ -7,28 +7,108 @@
 
 import UIKit
 
-final class GameViewController: BaseViewController {
-    private let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+final class GameViewController: BaseViewController, Storyboarded {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private enum Section: Int {
+        case nowProgress
+        case freeGameRanking
+        case iPhoneGame
+        case popularGame
+        case gameRecommend
+        
+        static func count() -> Int {
+            return Section.gameRecommend.rawValue + 1
+        }
+    }
     
     override func attribute() {
         super.attribute()
-        setupLabel()
+        self.title = "게임"
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(GameHeaderCollectionViewCell.self)
+        collectionView.register(GameListCollectionViewCell.self)
+    }
+}
+
+// MARK: UICollectionViewDataSource
+extension GameViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return Section.count()
     }
     
-    private func setupLabel() {
-        label.text = "게임"
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        guard let section = Section(rawValue: section) else { fatalError() }
+        switch section {
+        case .nowProgress:
+            return 1
+        default:
+            return 2
+        }
     }
     
-    override func layout() {
-        super.layout()
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        guard let section = Section(rawValue: indexPath.section) else { fatalError() }
+        switch section {
+        case .nowProgress:
+            return gameHeaderCollectionViewCell(for: indexPath)
+        default:
+            if indexPath.row == 0 {
+                return gameHeaderCollectionViewCell(for: indexPath)
+            } else {
+                return gameListCollectionViewCell(for: indexPath)
+            }
+        }
+    }
+    
+    private func gameHeaderCollectionViewCell(
+        for indexPath: IndexPath
+    ) -> GameHeaderCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(GameHeaderCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
         
-        view.addSubview(label)
-        label.snp.makeConstraints {
-            $0.center.equalTo(self.view.snp.center)
+        return cell
+    }
+    
+    private func gameListCollectionViewCell(
+        for indexPath: IndexPath
+    ) -> GameListCollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(GameListCollectionViewCell.self,
+                                                            for: indexPath)
+        else { fatalError() }
+        cell.parentController = self
+        return cell
+    }
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension GameViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        guard let section = Section(rawValue: indexPath.section)
+        else { fatalError() }
+        switch section {
+        case .nowProgress:
+            return .init(width: DeviceInfo.width, height: 60)
+        default:
+            if indexPath.row == 0 {
+                return .init(width: DeviceInfo.width, height: 60)
+            } else {
+                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
+                return .init(width: DeviceInfo.width, height: height)
+            }
         }
     }
 }

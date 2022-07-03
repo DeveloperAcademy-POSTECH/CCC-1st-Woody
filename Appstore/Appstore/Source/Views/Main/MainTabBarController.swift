@@ -9,12 +9,15 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
     private let todayViewController: UINavigationController = {
-        let todayViewController = TodayViewController()
+        let todayViewController = TodayViewController.instantiate()
         return todayViewController.wrappedByNavigationController()
     }()
     private let gameViewController: UINavigationController = {
-        let gameViewController = GameViewController()
-        return gameViewController.wrappedByNavigationController()
+        let gameViewController = GameViewController.instantiate()
+        let navigationController = gameViewController.wrappedByNavigationController()
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.isNavigationBarHidden = false
+        return navigationController
     }()
     private let appViewController: UINavigationController = {
         let appViewController = AppViewController()
