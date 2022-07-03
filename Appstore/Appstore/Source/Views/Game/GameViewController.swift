@@ -126,7 +126,7 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
             if indexPath.row == 0 {
                 return .init(width: DeviceInfo.width, height: 48)
             } else {
-                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3
+                let height: CGFloat = AppDownloadViews.spacing * 4 + AppDownloadView.cellHeight * 3 + 16
                 return .init(width: DeviceInfo.width, height: height)
             }
         }
