@@ -110,6 +110,7 @@
 				EFA063742871D1990063F429 /* TossApp.swift */,
 				EF207DDB2872D1C3008ED69A /* Helper */,
 				EF207DDA2872D1B3008ED69A /* Views */,
+				EFA063762871D1990063F429 /* ContentView.swift */,
 				EFA063782871D19A0063F429 /* Assets.xcassets */,
 				EFA0637A2871D19A0063F429 /* Preview Content */,
 			);
@@ -229,6 +230,7 @@
 				EFA063752871D1990063F429 /* TossApp.swift in Sources */,
 				EF0FF61F2871E1E1002FBED6 /* Whole.swift in Sources */,
 				EF0FF62728720655002FBED6 /* BottomView.swift in Sources */,
+				EFA063752871D1990063F429 /* TossApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
