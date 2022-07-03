@@ -30,16 +30,12 @@
 		EF6DC8BD285176FA00582872 /* VisualEffect+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6DC8BC285176FA00582872 /* VisualEffect+.swift */; };
 		EF871E4F284CF02D009D6400 /* AppDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E4E284CF02D009D6400 /* AppDownloadView.swift */; };
 		EF871E51284CF6A9009D6400 /* AppDownloadViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */; };
-		EF871E53284CF803009D6400 /* HostingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */; };
 		EF871E53284CF803009D6400 /* AppDownloadsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */; };
 		EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9496B3284CA74300654FD7 /* GameViewController.storyboard */; };
 		EF9496B6284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */; };
 		EF9496B8284CCE1500654FD7 /* GameListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */; };
-		EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */; };
-		EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */; };
-		EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */; };
-		EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */; };
 		EF9709EF284BC8E500D64714 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = EF9709EE284BC8E500D64714 /* FlexLayout */; };
+		EFA063862871DAF30063F429 /* HostingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063852871DAF30063F429 /* HostingCollectionViewCell.swift */; };
 		EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */; };
 		EFA7B974284B4181006671EF /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7B973284B4181006671EF /* Storyboarded.swift */; };
 		EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */; };
@@ -80,15 +76,11 @@
 		EF6DC8BC285176FA00582872 /* VisualEffect+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisualEffect+.swift"; sourceTree = "<group>"; };
 		EF871E4E284CF02D009D6400 /* AppDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadView.swift; sourceTree = "<group>"; };
 		EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadViews.swift; sourceTree = "<group>"; };
-		EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDownloadsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9496B3284CA74300654FD7 /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFA063852871DAF30063F429 /* HostingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayViewController.storyboard; sourceTree = "<group>"; };
 		EFA7B973284B4181006671EF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EFAF948F2848EE2B0067A63F /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
@@ -175,11 +167,9 @@
 		EF6D0F2A2847E01A004F5CEB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF6DC8B92850460300582872 /* Helper */,
 				EF6D0F322847E331004F5CEB /* Main */,
 				EF6D0F372847EA8E004F5CEB /* Today */,
 				EF6D0F3A2847EAA9004F5CEB /* Game */,
-				EF6DC8B92850460300582872 /* Helper */,
 				EF6D0F3D2847EABA004F5CEB /* App */,
 				EFAF948E2848EE1F0067A63F /* Arcade */,
 				EFAF94912848EE2C0067A63F /* Search */,
@@ -226,12 +216,9 @@
 			children = (
 				EF6D0F382847EAA7004F5CEB /* TodayViewController.swift */,
 				EFA7B96F284B3D28006671EF /* TodayViewController.storyboard */,
-				EF9709E0284BA56100D64714 /* HeaderCollectionViewCell.swift */,
 				EFD6EBF6286A0AA00023BA16 /* TodayHeaderCell.swift */,
 				EF475A9C2866E92E003BA54B /* TodayType1Cell.swift */,
-				EF9709E1284BA56100D64714 /* HeaderCollectionViewCell.xib */,
-				EF9709E6284BAC1200D64714 /* ContentCollectionViewCell.swift */,
-				EF9709E7284BAC1200D64714 /* ContentCollectionViewCell.xib */,
+				EFA063852871DAF30063F429 /* HostingCollectionViewCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -241,9 +228,7 @@
 			children = (
 				EF6DC8B5285044C800582872 /* GameList */,
 				EF6DC8B6285044F400582872 /* GameTop */,
-				EF6DC8BF2851799C00582872 /* Header */,
 				EF6D0F3B2847EAB8004F5CEB /* GameViewController.swift */,
-				EF871E49284CEF19009D6400 /* SwiftUI */,
 				EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */,
 				EF871E52284CF803009D6400 /* AppDownloadsCollectionViewCell.swift */,
 				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
@@ -282,7 +267,6 @@
 		EF6DC8B5285044C800582872 /* GameList */ = {
 			isa = PBXGroup;
 			children = (
-				EF9496B7284CCE1500654FD7 /* GameListCollectionViewCell.swift */,
 				EF871E50284CF6A9009D6400 /* AppDownloadViews.swift */,
 				EF871E4E284CF02D009D6400 /* AppDownloadView.swift */,
 			);
@@ -296,22 +280,6 @@
 				EF6DC8B32850431A00582872 /* CurrentProgressAppView.swift */,
 			);
 			path = GameTop;
-			sourceTree = "<group>";
-		};
-		EF6DC8B92850460300582872 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				EF871E52284CF803009D6400 /* HostingCollectionViewCell.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		EF6DC8BF2851799C00582872 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				EF9496B5284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift */,
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 		EFAF948E2848EE1F0067A63F /* Arcade */ = {
@@ -405,14 +373,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF9709E9284BAC1200D64714 /* ContentCollectionViewCell.xib in Resources */,
 				EF6D0F282847DEF9004F5CEB /* .swiftlint.yml in Resources */,
 				EFA7B970284B3D28006671EF /* TodayViewController.storyboard in Resources */,
 				EF6D0F1D2847DE4F004F5CEB /* LaunchScreen.storyboard in Resources */,
 				EF6D0F1A2847DE4F004F5CEB /* Assets.xcassets in Resources */,
 				EF9496B4284CA74300654FD7 /* GameViewController.storyboard in Resources */,
 				EF6D0F182847DE4E004F5CEB /* Main.storyboard in Resources */,
-				EF9709E3284BA56100D64714 /* HeaderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,8 +416,6 @@
 				EF6D0F3F2847EAC3004F5CEB /* AppViewController.swift in Sources */,
 				EF871E4F284CF02D009D6400 /* AppDownloadView.swift in Sources */,
 				EF6D0F312847E1DA004F5CEB /* UILabel+.swift in Sources */,
-				EF9709E2284BA56100D64714 /* HeaderCollectionViewCell.swift in Sources */,
-				EF9709E8284BAC1200D64714 /* ContentCollectionViewCell.swift in Sources */,
 				EF6DC8BD285176FA00582872 /* VisualEffect+.swift in Sources */,
 				EF6D0F112847DE4E004F5CEB /* AppDelegate.swift in Sources */,
 				EF871E51284CF6A9009D6400 /* AppDownloadViews.swift in Sources */,
@@ -465,12 +429,13 @@
 				EFD0D080284B43140033566F /* BaseCollectionViewCell.swift in Sources */,
 				EF475A9D2866E92E003BA54B /* TodayType1Cell.swift in Sources */,
 				EF475A9F2866E994003BA54B /* CodeBasedCollectionViewCell.swift in Sources */,
-				EF871E53284CF803009D6400 /* HostingCollectionViewCell.swift in Sources */,
+				EF871E53284CF803009D6400 /* AppDownloadsCollectionViewCell.swift in Sources */,
 				EFAF94932848EE350067A63F /* SearchViewController.swift in Sources */,
 				EFAF94902848EE2B0067A63F /* ArcadeViewController.swift in Sources */,
 				EF6D0F2F2847E1AD004F5CEB /* UITableView+.swift in Sources */,
 				EF6DC8B82850450200582872 /* GameTopCollectionViewCell.swift in Sources */,
 				EFD0D086284B516F0033566F /* UIStackView+.swift in Sources */,
+				EFA063862871DAF30063F429 /* HostingCollectionViewCell.swift in Sources */,
 				EF9496B6284CAE0700654FD7 /* GameHeaderCollectionViewCell.swift in Sources */,
 				EFD0D084284B4E710033566F /* UIView+.swift in Sources */,
 				EF6DC8B42850431A00582872 /* CurrentProgressAppView.swift in Sources */,

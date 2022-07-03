@@ -54,27 +54,5 @@ final class MainTabBarController: UITabBarController {
     
     private func setupViewControllers() {
         setViewControllers(viewControllersToShow, animated: false)
-        tabBar.barTintColor = .white
-        tabBar.backgroundColor = .white
-        
-        let viewControllers = [todayViewController, gameViewController, appViewController, acadeViewController, searchViewController]
-        viewControllers
-            .enumerated()
-            .forEach {
-            $0.element.tabBarItem = UITabBarItem(title: tabItems[$0.offset].rawValue,
-                                                 image: tabItems[$0.offset].image,
-                                                 selectedImage: nil)
-        }
-        setupViewControllers()
-    }
-    
-    private func setupTabBarItems(index: Int) -> UITabBarItem {
-        return UITabBarItem(title: tabItems[index].rawValue,
-                            image: tabItems[index].image,
-                            selectedImage: nil)
-    }
-    
-    private func setupViewControllers() {
-        setViewControllers(viewControllersToShow, animated: false)
     }
 }

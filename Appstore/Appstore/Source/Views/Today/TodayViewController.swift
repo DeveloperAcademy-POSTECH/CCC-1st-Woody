@@ -16,8 +16,8 @@ final class TodayViewController: BaseViewController, Storyboarded {
     override func attribute() {
         super.attribute()
         
-        collectionView.registerWithNib(HeaderCollectionViewCell.self)
-        collectionView.registerWithNib(TodayType1Cell.self)
+        collectionView.register(TodayHeaderCell.self)
+        collectionView.register(TodayType1Cell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -49,8 +49,8 @@ extension TodayViewController: UICollectionViewDataSource {
     
     private func createHeaderCollectionViewCell(
         for indexPath: IndexPath
-    ) -> HeaderCollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(HeaderCollectionViewCell.self,
+    ) -> TodayHeaderCell {
+        guard let cell = collectionView.dequeueReusableCell(TodayHeaderCell.self,
                                                             for: indexPath)
         else { fatalError() }
         
