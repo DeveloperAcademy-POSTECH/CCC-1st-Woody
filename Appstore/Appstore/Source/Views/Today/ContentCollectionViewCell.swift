@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContentCollectionViewCell: BaseCollectionViewCell {
+final class ContentCollectionViewCell: BaseCollectionViewCellWithNib {
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomView: UIView!
