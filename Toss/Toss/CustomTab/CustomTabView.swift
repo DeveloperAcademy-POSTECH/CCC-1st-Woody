@@ -22,7 +22,7 @@ struct CustomTabView: View {
                 Spacer()
                 BottomView(selectedTab: $selectedTab)
             }
-            .padding(.bottom, 8)
+
         }
         .ignoresSafeArea()
     }

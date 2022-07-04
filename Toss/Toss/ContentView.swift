@@ -11,15 +11,7 @@ struct ContentView: View {
     @State var selectedTab: Tab
     
     var body: some View {
-        TabView {
-            ForEach(Tab.allCases, id: \.self) { tab in
-                tab.view
-                    .tabItem {
-                        Label(tab.title, systemImage: tab.systemImageName)
-                    }
-            }
-        }
-        .accentColor(.black)
+        CustomTabView(selectedTab: $selectedTab)
     }
 
 }
