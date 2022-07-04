@@ -57,6 +57,7 @@
 		EF207DD728721086008ED69A /* CustomTab */ = {
 			isa = PBXGroup;
 			children = (
+				EF0FF6202871E547002FBED6 /* Tab.swift */,
 				EF0FF62228720430002FBED6 /* TabBarItem.swift */,
 				EF0FF62628720655002FBED6 /* BottomView.swift */,
 				EF207DD528720D43008ED69A /* CustomTabView.swift */,
@@ -88,7 +89,6 @@
 				EFA063762871D1990063F429 /* ContentView.swift */,
 				EF207DD82872C906008ED69A /* Pallete.swift */,
 				EF207DD728721086008ED69A /* CustomTab */,
-				EF0FF6202871E547002FBED6 /* Tab.swift */,
 				EF0FF6142871DF49002FBED6 /* Home.swift */,
 				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
 				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
