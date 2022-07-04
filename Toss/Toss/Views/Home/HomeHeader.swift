@@ -21,6 +21,9 @@ struct HomeHeader: View {
             }
         }
         .padding(10)
+        .frame(height: 60)
+        .foregroundColor(Pallete.backgroundGray.color)
+        .background(.thinMaterial)
     }
     
     @ViewBuilder
