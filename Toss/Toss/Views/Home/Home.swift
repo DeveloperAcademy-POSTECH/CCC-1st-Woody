@@ -11,10 +11,14 @@ struct Home: View {
     var body: some View {
         ZStack {
             ScrollView(.vertical, showsIndicators: true) {
-                EmptyView().frame(height: 50)
-                Pallete.backgroundGray.color
-                    .frame(height: 1000)
+                Color.clear.frame(height: 12)
+                HomeTossBankButton()
+        
             }
+            .padding([.leading, .trailing], 16)
+            .padding(.top, 60)
+            .background(Pallete.backgroundGray.color)
+                
             homeHeader()
         }
     }

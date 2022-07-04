@@ -20,7 +20,7 @@ struct HomeHeader: View {
                 alarmButton()
             }
         }
-        .padding(10)
+        .padding([.leading, .trailing], 16)
         .frame(height: 60)
         .foregroundColor(Pallete.backgroundGray.color)
         .background(.thinMaterial)

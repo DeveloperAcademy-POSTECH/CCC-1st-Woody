@@ -13,6 +13,8 @@ enum Pallete: String {
     case backgroundGray
     case basicGray
     case red
+    case black
+    case white
 
     var color: Color {
         return Color(self.rawValue)
