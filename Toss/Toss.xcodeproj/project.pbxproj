@@ -135,10 +135,18 @@
 			isa = PBXGroup;
 			children = (
 				EF0FF6142871DF49002FBED6 /* Home.swift */,
+				EFEDF7EA28735DE200FE9B40 /* Components */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFEDF7EA28735DE200FE9B40 /* Components */ = {
+			isa = PBXGroup;
+			children = (
 				EFEDF7E82873517B00FE9B40 /* HomeTossBankButton.swift */,
 				EFEDF7E22873348200FE9B40 /* HomeHeader.swift */,
 			);
-			path = Home;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
