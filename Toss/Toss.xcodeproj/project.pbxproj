@@ -65,6 +65,28 @@
 			path = CustomTab;
 			sourceTree = "<group>";
 		};
+		EF207DDA2872D1B3008ED69A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF207DD728721086008ED69A /* CustomTab */,
+				EFA063762871D1990063F429 /* ContentView.swift */,
+				EF0FF6142871DF49002FBED6 /* Home.swift */,
+				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
+				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
+				EF0FF61C2871E1CF002FBED6 /* Stock.swift */,
+				EF0FF61E2871E1E1002FBED6 /* Whole.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF207DDB2872D1C3008ED69A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EF207DD82872C906008ED69A /* Pallete.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		EFA063682871D1990063F429 = {
 			isa = PBXGroup;
 			children = (
@@ -86,14 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				EFA063742871D1990063F429 /* TossApp.swift */,
-				EFA063762871D1990063F429 /* ContentView.swift */,
-				EF207DD82872C906008ED69A /* Pallete.swift */,
-				EF207DD728721086008ED69A /* CustomTab */,
-				EF0FF6142871DF49002FBED6 /* Home.swift */,
-				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
-				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
-				EF0FF61C2871E1CF002FBED6 /* Stock.swift */,
-				EF0FF61E2871E1E1002FBED6 /* Whole.swift */,
+				EF207DDB2872D1C3008ED69A /* Helper */,
+				EF207DDA2872D1B3008ED69A /* Views */,
 				EFA063782871D19A0063F429 /* Assets.xcassets */,
 				EFA0637A2871D19A0063F429 /* Preview Content */,
 			);
