@@ -11,8 +11,7 @@ struct Home: View {
     var body: some View {
         ZStack {
             ScrollView(.vertical, showsIndicators: true) {
-                Color.clear
-                    .frame(height: 50)
+                EmptyView().frame(height: 50)
                 Pallete.backgroundGray.color
                     .frame(height: 1000)
             }

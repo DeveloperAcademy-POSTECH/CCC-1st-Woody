@@ -17,13 +17,13 @@
 		EF0FF62728720655002FBED6 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF62628720655002FBED6 /* BottomView.swift */; };
 		EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF207DD528720D43008ED69A /* CustomTabView.swift */; };
 		EF207DD92872C906008ED69A /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF207DD82872C906008ED69A /* Pallete.swift */; };
-		EFA063752871D1990063F429 /* TossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063742871D1990063F429 /* TossApp.swift */; };
 		EFA063772871D1990063F429 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063762871D1990063F429 /* ContentView.swift */; };
 		EFA063792871D19A0063F429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA063782871D19A0063F429 /* Assets.xcassets */; };
 		EFA0637C2871D19A0063F429 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */; };
 		EFA063842871D26B0063F429 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EFA063832871D26B0063F429 /* .swiftlint.yml */; };
 		EFEDF7E32873348200FE9B40 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E22873348200FE9B40 /* HomeHeader.swift */; };
 		EFEDF7E628733D4600FE9B40 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E528733D4600FE9B40 /* DeviceInfo.swift */; };
+		EFEDF7E728734EC100FE9B40 /* TossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063742871D1990063F429 /* TossApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				EF207DD728721086008ED69A /* CustomTab */,
-				EFA063762871D1990063F429 /* ContentView.swift */,
 				EFEDF7E428733C4300FE9B40 /* Home */,
 				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
 				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
@@ -232,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEDF7E728734EC100FE9B40 /* TossApp.swift in Sources */,
 				EFA063772871D1990063F429 /* ContentView.swift in Sources */,
 				EF0FF6192871E1AA002FBED6 /* Benefit.swift in Sources */,
 				EF0FF61D2871E1CF002FBED6 /* Stock.swift in Sources */,
@@ -243,10 +243,8 @@
 				EF0FF61B2871E1B9002FBED6 /* Remittance.swift in Sources */,
 				EF207DD92872C906008ED69A /* Pallete.swift in Sources */,
 				EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */,
-				EFA063752871D1990063F429 /* TossApp.swift in Sources */,
 				EF0FF61F2871E1E1002FBED6 /* Whole.swift in Sources */,
 				EF0FF62728720655002FBED6 /* BottomView.swift in Sources */,
-				EFA063752871D1990063F429 /* TossApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

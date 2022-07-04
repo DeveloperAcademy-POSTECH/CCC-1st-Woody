@@ -14,7 +14,6 @@ enum Pallete: String {
     case basicGray
     case red
 
-    
     var color: Color {
         return Color(self.rawValue)
     }
