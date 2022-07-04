@@ -10,7 +10,7 @@ import SwiftUI
 enum Pallete: String {
     case tabSelectedColor
     case tabUnelectedColor
-    case redColor
+    case basicGray
     
     var color: Color {
         return Color(self.rawValue)

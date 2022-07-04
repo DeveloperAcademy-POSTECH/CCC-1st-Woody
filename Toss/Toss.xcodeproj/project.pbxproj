@@ -22,6 +22,7 @@
 		EFA063792871D19A0063F429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA063782871D19A0063F429 /* Assets.xcassets */; };
 		EFA0637C2871D19A0063F429 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */; };
 		EFA063842871D26B0063F429 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EFA063832871D26B0063F429 /* .swiftlint.yml */; };
+		EFEDF7E32873348200FE9B40 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E22873348200FE9B40 /* HomeHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		EFA063782871D19A0063F429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFA063832871D26B0063F429 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EFEDF7E22873348200FE9B40 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				EF207DD728721086008ED69A /* CustomTab */,
 				EFA063762871D1990063F429 /* ContentView.swift */,
 				EF0FF6142871DF49002FBED6 /* Home.swift */,
+				EFEDF7E22873348200FE9B40 /* HomeHeader.swift */,
 				EF0FF6182871E1AA002FBED6 /* Benefit.swift */,
 				EF0FF61A2871E1B9002FBED6 /* Remittance.swift */,
 				EF0FF61C2871E1CF002FBED6 /* Stock.swift */,
@@ -224,6 +227,7 @@
 				EF0FF62328720430002FBED6 /* TabBarItem.swift in Sources */,
 				EF0FF6212871E547002FBED6 /* Tab.swift in Sources */,
 				EF0FF6152871DF49002FBED6 /* Home.swift in Sources */,
+				EFEDF7E32873348200FE9B40 /* HomeHeader.swift in Sources */,
 				EF0FF61B2871E1B9002FBED6 /* Remittance.swift in Sources */,
 				EF207DD92872C906008ED69A /* Pallete.swift in Sources */,
 				EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */,

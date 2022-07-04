@@ -9,7 +9,12 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text("홈")
+        ZStack {
+            VStack {
+                HomeHeader()
+                Spacer()
+            }
+        }
     }
 }
 
