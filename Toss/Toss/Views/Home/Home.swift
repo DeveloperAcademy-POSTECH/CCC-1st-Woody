@@ -13,9 +13,9 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: true) {
                 Color.clear
                     .frame(height: 50)
-                Color.blue.frame(height: 1000, alignment: .center)
+                Pallete.backgroundGray.color
+                    .frame(height: 1000)
             }
-
             homeHeader()
         }
     }

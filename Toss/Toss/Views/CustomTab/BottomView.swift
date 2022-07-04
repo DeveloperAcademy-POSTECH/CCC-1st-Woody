@@ -29,7 +29,6 @@ struct BottomView: View {
         }
         .frame(height: height)
         .background(Color.white)
-        .ignoresSafeArea()
         
     }
     
