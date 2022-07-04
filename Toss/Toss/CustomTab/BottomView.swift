@@ -9,12 +9,13 @@ import SwiftUI
 
 struct BottomView: View {
     
-    var height: CGFloat = 90
+    let leadingTrailingPadding: CGFloat = 35
+    let height: CGFloat = 90
     @Binding var selectedTab: Tab
     
     var body: some View {
         HStack {
-            Spacer()
+            Spacer().frame(width: leadingTrailingPadding)
             ForEach(Tab.allCases, id: \.self) { tab in
                 Button {
                     self.selectedTab = tab
@@ -22,15 +23,12 @@ struct BottomView: View {
                     TabBarItem(item: tab,
                                isSelected: selectedTab == tab)
                 }
-                Spacer()
+                if tab != .whole { Spacer() }
             }
+            Spacer().frame(width: leadingTrailingPadding)
         }
         .frame(height: height)
         .background(Color.white)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.black, lineWidth: 0.5)
-        )
         .ignoresSafeArea()
         
     }

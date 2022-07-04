@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct TabItem {
-    let image: String
-    let title: String
-}
-
 struct TabBarItem: View {
     let item: Tab
     let isSelected: Bool
@@ -21,9 +16,9 @@ struct TabBarItem: View {
             Image(systemName: item.systemImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .tint(isSelected ? .black : .gray)
-                .frame(width: 26, height: 26)
-                .animation(.default, value: isSelected)
+                .tint(isSelected ? Pallete.tabSelectedColor.color : Pallete.tabUnelectedColor.color)
+                .frame(width: 23, height: 23)
+                // .animation(.default, value: isSelected)
             
             Spacer().frame(height: 4)
             
