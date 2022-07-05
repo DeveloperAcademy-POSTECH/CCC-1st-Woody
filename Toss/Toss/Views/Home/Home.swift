@@ -17,11 +17,11 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            homeHeader()
+
             ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
-                    
-                    Color.clear.frame(height: 12)
+                 
+                    Color.clear.frame(height: 60 + 12)
                     
                     HomeCellHeader([25, 25, 25, 25], title: "토스뱅크")
                     
@@ -55,10 +55,11 @@ struct Home: View {
                     .padding(40)
                 }
                 .padding([.leading, .trailing], 16)
+                
             }
-//            .padding(.top, 60)
             .background(Pallete.backgroundGray.color)
-             
+            
+            homeHeader()
         }
     }
     
@@ -66,8 +67,10 @@ struct Home: View {
     private func homeHeader() -> some View {
         VStack {
             HomeHeader()
+                .background(.ultraThinMaterial)
             Spacer()
         }
+//        .ignoresSafeArea()
     }
 }
 

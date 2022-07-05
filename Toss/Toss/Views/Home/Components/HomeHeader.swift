@@ -10,32 +10,18 @@ import SwiftUI
 struct HomeHeader: View {
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.white)
-                .opacity(0.1)
-                .background(
-                    Color.white
-                        .opacity(0.08)
-                        .blur(radius: 10)
-                )
-            VStack {
-                HStack {
-                    logoMark()
-                    
-                    Spacer()
-                    
-                    HStack(alignment: .center, spacing: 24) {
-                        messageButton()
-                        alarmButton()
-                    }
-                }
-                .padding([.leading, .trailing], 16)
-                .frame(height: 60)
-                Spacer()
-            }
+        HStack {
+            logoMark()
             
+            Spacer()
+            
+            HStack(alignment: .center, spacing: 24) {
+                messageButton()
+                alarmButton()
+            }
         }
+        .padding([.leading, .trailing], 16)
+        .frame(height: 60)
     }
     
     @ViewBuilder
