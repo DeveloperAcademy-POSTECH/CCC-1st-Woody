@@ -23,11 +23,11 @@ struct HomeAssets: View {
                 Spacer()
                 sendButton()
             }
-            .padding(20)
-            .background(Pallete.white.color)
-            .cornerRadius(radius, corners: .bottomLeft)
-            .cornerRadius(radius, corners: .bottomRight)
+            .padding(6)
         }
+        .buttonStyle(TossButtonStyle())
+        .cornerRadius(radius, corners: .bottomLeft)
+        .cornerRadius(radius, corners: .bottomRight)
     }
     
     @ViewBuilder

@@ -24,11 +24,11 @@ struct Consumption: View {
                 Spacer()
                 button()
             }
-            .padding(20)
-            .background(Pallete.white.color)
-            .cornerRadius(radius, corners: .bottomLeft)
-            .cornerRadius(radius, corners: .bottomRight)
         }
+        .buttonStyle(TossButtonStyle())
+        .background(Pallete.white.color)
+        .cornerRadius(radius, corners: .bottomLeft)
+        .cornerRadius(radius, corners: .bottomRight)
     }
     
     @ViewBuilder

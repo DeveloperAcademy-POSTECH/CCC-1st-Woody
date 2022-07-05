@@ -20,7 +20,6 @@ struct HomeCellHeader: View {
         Button {
             print("Tap 토스뱅크")
         } label: {
-            
             HStack {
                 Text(title)
                     .foregroundColor(Pallete.black.color)
@@ -31,13 +30,13 @@ struct HomeCellHeader: View {
                         .foregroundColor(Pallete.basicGray.color)
                 }
             }
-            .padding(20)
-            .background(Pallete.white.color)
-            .cornerRadius(radius[0], corners: .topLeft)
-            .cornerRadius(radius[1], corners: .topRight)
-            .cornerRadius(radius[2], corners: .bottomRight)
-            .cornerRadius(radius[3], corners: .bottomLeft)
+            .padding(6)
         }
+        .buttonStyle(TossButtonStyle())
+        .cornerRadius(radius[0], corners: .topLeft)
+        .cornerRadius(radius[1], corners: .topRight)
+        .cornerRadius(radius[2], corners: .bottomRight)
+        .cornerRadius(radius[3], corners: .bottomLeft)
 
     }
 }
