@@ -41,6 +41,18 @@ struct Home: View {
                     HomeCellHeader([25, 25, 0, 0], title: "소비", isRight: false)
                     Consumption(radius: 25)
                     HomeHorizontalCard()
+                    HStack(spacing: 24) {
+                        Text("금액 숨기")
+                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .foregroundColor(Pallete.basicGray.color)
+                        Pallete.basicGray.color
+                            .frame(width: 1, height: 15)
+                        Text("자산 추가")
+                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .foregroundColor(Pallete.basicGray.color)
+                        
+                    }
+                    .padding(40)
                 }
                 .padding([.leading, .trailing], 16)
             }
