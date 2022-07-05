@@ -24,7 +24,12 @@
 		EFEDF7E32873348200FE9B40 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E22873348200FE9B40 /* HomeHeader.swift */; };
 		EFEDF7E628733D4600FE9B40 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E528733D4600FE9B40 /* DeviceInfo.swift */; };
 		EFEDF7E728734EC100FE9B40 /* TossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063742871D1990063F429 /* TossApp.swift */; };
-		EFEDF7E92873517B00FE9B40 /* HomeTossBankButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E82873517B00FE9B40 /* HomeTossBankButton.swift */; };
+		EFEDF7E92873517B00FE9B40 /* HomeCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7E82873517B00FE9B40 /* HomeCellHeader.swift */; };
+		EFEDF7EC28735E2400FE9B40 /* HomeAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7EB28735E2400FE9B40 /* HomeAssets.swift */; };
+		EFEDF7EE287364F300FE9B40 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7ED287364F300FE9B40 /* View+.swift */; };
+		EFEDF7F02873684D00FE9B40 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7EF2873684D00FE9B40 /* Consumption.swift */; };
+		EFEDF7F228736A6E00FE9B40 /* HomeRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7F128736A6E00FE9B40 /* HomeRectangle.swift */; };
+		EFEDF7F42873E40200FE9B40 /* HomeHorizontalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDF7F32873E40200FE9B40 /* HomeHorizontalCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +51,12 @@
 		EFA063832871D26B0063F429 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EFEDF7E22873348200FE9B40 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		EFEDF7E528733D4600FE9B40 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
-		EFEDF7E82873517B00FE9B40 /* HomeTossBankButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTossBankButton.swift; sourceTree = "<group>"; };
+		EFEDF7E82873517B00FE9B40 /* HomeCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellHeader.swift; sourceTree = "<group>"; };
+		EFEDF7EB28735E2400FE9B40 /* HomeAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssets.swift; sourceTree = "<group>"; };
+		EFEDF7ED287364F300FE9B40 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		EFEDF7EF2873684D00FE9B40 /* Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumption.swift; sourceTree = "<group>"; };
+		EFEDF7F128736A6E00FE9B40 /* HomeRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRectangle.swift; sourceTree = "<group>"; };
+		EFEDF7F32873E40200FE9B40 /* HomeHorizontalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHorizontalCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,7 @@
 			children = (
 				EF207DD82872C906008ED69A /* Pallete.swift */,
 				EFEDF7E528733D4600FE9B40 /* DeviceInfo.swift */,
+				EFEDF7ED287364F300FE9B40 /* View+.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -143,7 +154,11 @@
 		EFEDF7EA28735DE200FE9B40 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EFEDF7E82873517B00FE9B40 /* HomeTossBankButton.swift */,
+				EFEDF7E82873517B00FE9B40 /* HomeCellHeader.swift */,
+				EFEDF7EB28735E2400FE9B40 /* HomeAssets.swift */,
+				EFEDF7EF2873684D00FE9B40 /* Consumption.swift */,
+				EFEDF7F128736A6E00FE9B40 /* HomeRectangle.swift */,
+				EFEDF7F32873E40200FE9B40 /* HomeHorizontalCard.swift */,
 				EFEDF7E22873348200FE9B40 /* HomeHeader.swift */,
 			);
 			path = Components;
@@ -243,19 +258,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEDF7E728734EC100FE9B40 /* TossApp.swift in Sources */,
+				EFEDF7F02873684D00FE9B40 /* Consumption.swift in Sources */,
 				EFA063772871D1990063F429 /* ContentView.swift in Sources */,
 				EF0FF6192871E1AA002FBED6 /* Benefit.swift in Sources */,
 				EF0FF61D2871E1CF002FBED6 /* Stock.swift in Sources */,
-				EFEDF7E92873517B00FE9B40 /* HomeTossBankButton.swift in Sources */,
+				EFEDF7E92873517B00FE9B40 /* HomeCellHeader.swift in Sources */,
+				EFEDF7EE287364F300FE9B40 /* View+.swift in Sources */,
 				EF0FF62328720430002FBED6 /* TabBarItem.swift in Sources */,
 				EF0FF6212871E547002FBED6 /* Tab.swift in Sources */,
+				EFEDF7EC28735E2400FE9B40 /* HomeAssets.swift in Sources */,
 				EF0FF6152871DF49002FBED6 /* Home.swift in Sources */,
 				EFEDF7E32873348200FE9B40 /* HomeHeader.swift in Sources */,
 				EFEDF7E628733D4600FE9B40 /* DeviceInfo.swift in Sources */,
 				EF0FF61B2871E1B9002FBED6 /* Remittance.swift in Sources */,
 				EF207DD92872C906008ED69A /* Pallete.swift in Sources */,
 				EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */,
+				EFEDF7F42873E40200FE9B40 /* HomeHorizontalCard.swift in Sources */,
 				EF0FF61F2871E1E1002FBED6 /* Whole.swift in Sources */,
+				EFEDF7F228736A6E00FE9B40 /* HomeRectangle.swift in Sources */,
 				EF0FF62728720655002FBED6 /* BottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
