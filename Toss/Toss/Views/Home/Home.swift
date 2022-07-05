@@ -17,6 +17,7 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            homeHeader()
             ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
                     
@@ -35,18 +36,17 @@ struct Home: View {
                      
                     Color.clear.frame(height: 12)
                 }
+                .padding([.leading, .trailing], 16)
                 VStack(spacing: 0) {
                     HomeCellHeader([25, 25, 0, 0], title: "소비", isRight: false)
                     Consumption(radius: 25)
-                    
                     HomeHorizontalCard()
                 }
+                .padding([.leading, .trailing], 16)
             }
-            .padding([.leading, .trailing], 16)
-            .padding(.top, 60)
+//            .padding(.top, 60)
             .background(Pallete.backgroundGray.color)
-            
-            homeHeader()
+             
         }
     }
     

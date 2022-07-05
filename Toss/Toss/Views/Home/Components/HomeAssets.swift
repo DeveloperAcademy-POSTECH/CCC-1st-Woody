@@ -23,7 +23,7 @@ struct HomeAssets: View {
                 Spacer()
                 sendButton()
             }
-            .padding(6)
+            .padding(16)
         }
         .buttonStyle(TossButtonStyle())
         .cornerRadius(radius, corners: .bottomLeft)
@@ -34,7 +34,7 @@ struct HomeAssets: View {
     private func imageIcon() -> some View {
         Image("toss_logo")
             .resizable()
-            .frame(width: 42, height: 42, alignment: .center)
+            .frame(width: 40, height: 40, alignment: .center)
             .cornerRadius(21)
             .font(.system(size: 22, weight: .bold, design: .monospaced))
     }
@@ -44,10 +44,10 @@ struct HomeAssets: View {
         VStack(alignment: .leading, spacing: 6) {
             Text("토스뱅크 통장")
                 .foregroundColor(Pallete.subGray.color)
-                .font(.system(size: 14, weight: .medium, design: .rounded))
+                .font(.system(size: 12, weight: .medium, design: .rounded))
             Text("436,089 원")
                 .foregroundColor(Pallete.black.color)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .font(.system(size: 17, weight: .semibold, design: .rounded))
         }
     }
     

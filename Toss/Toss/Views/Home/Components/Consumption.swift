@@ -24,6 +24,7 @@ struct Consumption: View {
                 Spacer()
                 button()
             }
+            .padding(16)
         }
         .buttonStyle(TossButtonStyle())
         .background(Pallete.white.color)
@@ -35,7 +36,7 @@ struct Consumption: View {
     private func image() -> some View {
         Image("card")
             .resizable()
-            .frame(width: 42, height: 42, alignment: .center)
+            .frame(width: 40, height: 40, alignment: .center)
     }
     
     @ViewBuilder
@@ -43,10 +44,10 @@ struct Consumption: View {
         VStack(alignment: .leading, spacing: 6) {
             Text("이번달 쓴 금액")
                 .foregroundColor(Pallete.subGray.color)
-                .font(.system(size: 14, weight: .medium, design: .rounded))
+                .font(.system(size: 12, weight: .medium, design: .rounded))
             Text("1,436,413 원")
                 .foregroundColor(Pallete.black.color)
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .font(.system(size: 17, weight: .semibold, design: .rounded))
         }
     }
     

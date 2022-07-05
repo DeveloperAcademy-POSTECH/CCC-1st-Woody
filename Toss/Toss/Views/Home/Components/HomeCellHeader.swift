@@ -30,7 +30,7 @@ struct HomeCellHeader: View {
                         .foregroundColor(Pallete.basicGray.color)
                 }
             }
-            .padding(6)
+            .padding(20)
         }
         .buttonStyle(TossButtonStyle())
         .cornerRadius(radius[0], corners: .topLeft)

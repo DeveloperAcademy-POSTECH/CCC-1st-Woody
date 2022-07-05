@@ -11,7 +11,6 @@ struct TossButtonStyle: ButtonStyle {
 
   func makeBody(configuration: Self.Configuration) -> some View {
     configuration.label
-      .padding()
       .foregroundColor(.white)
       .background(configuration.isPressed ? Pallete.white.color.opacity(0.7) : Pallete.white.color)
   }

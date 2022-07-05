@@ -11,15 +11,17 @@ struct HomeHorizontalCard: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
-                HomeRectangle(subTitle: "운전하면", title: "내 차 시세\n조회")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
+                HomeRectangle(subTitle: "운전하면", title: "내 차 팔기")
             }
         }
-        .frame(height: 180)
+        .frame(height: 150)
     }
 }
 

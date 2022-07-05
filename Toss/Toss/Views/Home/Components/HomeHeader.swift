@@ -10,20 +10,32 @@ import SwiftUI
 struct HomeHeader: View {
     
     var body: some View {
-        HStack {
-            logoMark()
-            
-            Spacer()
-            
-            HStack(alignment: .center, spacing: 24) {
-                messageButton()
-                alarmButton()
+        ZStack {
+            Rectangle()
+                .fill(.white)
+                .opacity(0.1)
+                .background(
+                    Color.white
+                        .opacity(0.08)
+                        .blur(radius: 10)
+                )
+            VStack {
+                HStack {
+                    logoMark()
+                    
+                    Spacer()
+                    
+                    HStack(alignment: .center, spacing: 24) {
+                        messageButton()
+                        alarmButton()
+                    }
+                }
+                .padding([.leading, .trailing], 16)
+                .frame(height: 60)
+                Spacer()
             }
+            
         }
-        .padding([.leading, .trailing], 16)
-        .frame(height: 60)
-        .foregroundColor(Pallete.backgroundGray.color)
-        .background(.thinMaterial)
     }
     
     @ViewBuilder
@@ -49,7 +61,7 @@ struct HomeHeader: View {
             Image(systemName: "message.fill")
                 .resizable()
                 .frame(width: 24, height: 24, alignment: .center)
-                
+            
         }
         .foregroundColor(Pallete.basicGray.color)
     }
