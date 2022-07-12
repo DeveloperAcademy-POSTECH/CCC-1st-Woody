@@ -11,11 +11,13 @@ struct HomeCellHeader: View {
     var radius: [CGFloat]
     var title: String
     var isRight: Bool
+
     init(_ radius: [CGFloat], title: String, isRight: Bool = true) {
         self.radius = radius
         self.title = title
         self.isRight = isRight
     }
+    
     var body: some View {
         Button {
             print("Tap 토스뱅크")

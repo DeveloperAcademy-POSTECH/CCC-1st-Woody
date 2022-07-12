@@ -7,20 +7,15 @@
 
 import SwiftUI
 
-struct AssetsData {
-    let imageName: String
-    let name: String
-    let money: String
-}
 struct Home: View {
     let cellRadius: CGFloat = 25
-    
+
     var body: some View {
         ZStack {
 
             ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
-                 
+
                     Color.clear.frame(height: 60 + 12)
                     
                     HomeCellHeader([25, 25, 25, 25], title: "토스뱅크")
@@ -28,7 +23,7 @@ struct Home: View {
                     Color.clear.frame(height: 12)
                     
                     HomeCellHeader([25, 25, 0, 0], title: "자산")
-                    HomeAssets()
+
                     HomeAssets()
                     HomeAssets()
                     HomeAssets()

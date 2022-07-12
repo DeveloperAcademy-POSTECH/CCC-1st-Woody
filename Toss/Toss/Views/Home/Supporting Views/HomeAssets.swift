@@ -18,10 +18,13 @@ struct HomeAssets: View {
             print("Tap 토스뱅크")
         } label: {
             HStack(spacing: 16) {
-                imageIcon()
+                BankIconImage(imageName: "toss_logo", width: 42)
+
                 bankText()
+
                 Spacer()
-                sendButton()
+
+                SendButton(sendAction: <#T##() -> Void#>)
             }
             .padding(16)
         }
@@ -29,16 +32,7 @@ struct HomeAssets: View {
         .cornerRadius(radius, corners: .bottomLeft)
         .cornerRadius(radius, corners: .bottomRight)
     }
-    
-    @ViewBuilder
-    private func imageIcon() -> some View {
-        Image("toss_logo")
-            .resizable()
-            .frame(width: 40, height: 40, alignment: .center)
-            .cornerRadius(21)
-            .font(.system(size: 22, weight: .bold, design: .monospaced))
-    }
-    
+
     @ViewBuilder
     private func bankText() -> some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -50,25 +44,16 @@ struct HomeAssets: View {
                 .font(.system(size: 17, weight: .semibold, design: .rounded))
         }
     }
-    
-    @ViewBuilder
-    private func sendButton() -> some View {
-        Button {
-            print("송금")
-        } label: {
-            Text("송금")
-                .foregroundColor(Pallete.subGray2.color)
-                .font(.system(size: 14, weight: .semibold, design: .rounded))
-                .padding([.leading, .trailing], 16)
-                .padding([.top, .bottom], 10)
-                .background(Pallete.backgroundGray.color)
-                .cornerRadius(6)
-        }
-    }
+
+    private func send
 }
 
 struct HomeAssets_Previews: PreviewProvider {
     static var previews: some View {
         HomeAssets()
     }
+}
+
+extension View {
+
 }

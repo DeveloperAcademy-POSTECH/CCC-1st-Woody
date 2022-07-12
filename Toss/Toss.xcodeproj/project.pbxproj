@@ -17,6 +17,8 @@
 		EF0FF62728720655002FBED6 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0FF62628720655002FBED6 /* BottomView.swift */; };
 		EF207DD628720D43008ED69A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF207DD528720D43008ED69A /* CustomTabView.swift */; };
 		EF207DD92872C906008ED69A /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF207DD82872C906008ED69A /* Pallete.swift */; };
+		EF9A9B92287D23C100DBE14E /* BankIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A9B91287D23C100DBE14E /* BankIconImage.swift */; };
+		EF9A9B96287D312200DBE14E /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A9B95287D312200DBE14E /* SendButton.swift */; };
 		EFA063772871D1990063F429 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA063762871D1990063F429 /* ContentView.swift */; };
 		EFA063792871D19A0063F429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA063782871D19A0063F429 /* Assets.xcassets */; };
 		EFA0637C2871D19A0063F429 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA0637B2871D19A0063F429 /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		EF0FF62628720655002FBED6 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		EF207DD528720D43008ED69A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		EF207DD82872C906008ED69A /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		EF9A9B91287D23C100DBE14E /* BankIconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankIconImage.swift; sourceTree = "<group>"; };
+		EF9A9B95287D312200DBE14E /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
 		EFA063712871D1990063F429 /* Toss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA063742871D1990063F429 /* TossApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossApp.swift; sourceTree = "<group>"; };
 		EFA063762871D1990063F429 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			children = (
 				EFEDF7E82873517B00FE9B40 /* HomeCellHeader.swift */,
 				EFEDF7EB28735E2400FE9B40 /* HomeAssets.swift */,
+				EF9A9B95287D312200DBE14E /* SendButton.swift */,
+				EF9A9B91287D23C100DBE14E /* BankIconImage.swift */,
 				EFEDF7EF2873684D00FE9B40 /* Consumption.swift */,
 				EFEDF7F128736A6E00FE9B40 /* HomeRectangle.swift */,
 				EFEDF7F32873E40200FE9B40 /* HomeHorizontalCard.swift */,
@@ -260,10 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9A9B96287D312200DBE14E /* SendButton.swift in Sources */,
 				EFEDF7E728734EC100FE9B40 /* TossApp.swift in Sources */,
 				EFEDF7F02873684D00FE9B40 /* Consumption.swift in Sources */,
 				EFA063772871D1990063F429 /* ContentView.swift in Sources */,
 				EF0FF6192871E1AA002FBED6 /* Benefit.swift in Sources */,
+				EF9A9B92287D23C100DBE14E /* BankIconImage.swift in Sources */,
 				EF0FF61D2871E1CF002FBED6 /* Stock.swift in Sources */,
 				EFEDF7E92873517B00FE9B40 /* HomeCellHeader.swift in Sources */,
 				EFEDF7EE287364F300FE9B40 /* View+.swift in Sources */,
